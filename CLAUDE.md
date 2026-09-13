@@ -229,11 +229,11 @@ Builds on: Week 1's definition (you can't dismantle something until you know wha
 Prepares for: Week 3's ranking of those parts by function.
 
 **Week 3 — The Parts That Do the Work**
-Central question: Which components actually repair harm, and which just perform contrition?
-Key concept: functional vs. performative components; responsibility-acceptance as the load-bearing part.
-Different because: moves from *listing* parts to *ranking* them — the first week with an explicit stance on what matters most.
+Central question: What work does each component of an apology actually do, and what changes when one is removed?
+Key concept: functional vs. performative components — an ablation test (remove one component, see what breaks) rather than a fixed hierarchy; which component turns out to be load-bearing depends on the case, not a universal ranking.
+Different because: the first week that asks what removing a part actually costs, without settling on one component as the permanent answer.
 Builds on: Week 2's component vocabulary.
-Prepares for: Week 4, where "failure" is diagnosed as a hollow or missing load-bearing component.
+Prepares for: Week 4, where "failure" is diagnosed case by case, as whichever component's absence actually breaks that specific apology.
 
 ### Movement C — Why do apologies fail? (Weeks 4–5)
 
@@ -241,7 +241,7 @@ Prepares for: Week 4, where "failure" is diagnosed as a hollow or missing load-b
 Central question: Why do apologies with all the "right" words still fail?
 Key concept: the near-apology/non-apology — conditional "sorry if," passive-voice deflection, "sorry you feel that way."
 Different because: case-study/close-reading week built on real public and interpersonal examples, not abstract framework-building.
-Builds on: Week 3's ranking — a non-apology is one where the load-bearing component is hollow.
+Builds on: Week 3's ablation method — a non-apology is one where whichever component that specific apology depended on turns out to be hollow or missing.
 Prepares for: Week 5's question of *why* people produce these on purpose.
 
 **Week 5 — Whose Apology Is It?**

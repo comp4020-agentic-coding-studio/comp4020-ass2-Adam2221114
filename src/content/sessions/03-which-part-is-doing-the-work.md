@@ -1,8 +1,8 @@
 ---
 title: Which Part Is Doing the Work?
 description:
-  Component ablation — students remove one part at a time from an already
-  marked-up apology to find out which removal actually breaks it
+  Component ablation across several different apologies — the same four
+  components, a different one load-bearing each time
 week: 3
 date: 2027-03-08
 teachers:
@@ -10,10 +10,10 @@ teachers:
 spec:
   - you bring the apology you marked up in Week 2 (or a new one, marked up
     the same way)
-  - you can rank its four components from most to least load-bearing and
-    defend the order against a challenge
-  - you can identify one component that could be deleted without the
-    apology collapsing, and one that can't
+  - you can show which component's removal breaks your apology, and which
+    removal barely changes it
+  - you can explain why a component that broke your apology might not
+    break someone else's
 ---
 
 Before the session, have your Week 2 marked-up apology ready — the one
@@ -23,16 +23,21 @@ exercise doesn't work on an un-annotated apology.
 
 In the session, working from that marked-up text, remove one component at
 a time — cross it out, don't just imagine it gone — and reread what's
-left. For each removal, decide: does the remainder still function as an
-apology, just a worse one, or does it stop functioning as an apology at
-all? Rank the four components from the one whose removal is most
-destructive to the one whose removal barely registers. Trade apologies
-with another pair and try to break their ranking by finding a component
-they called decorative that you think is load-bearing in their specific
-example — the ranking has to survive that challenge, not just your own
-first pass.
+left after each removal. For each one, decide: does the remainder still
+function as an apology, just a worse one, or does it stop functioning as
+an apology at all? Note which single removal did the most damage to your
+specific example.
 
-Afterwards, hold onto both the ranking and the challenge that survived it.
+Then trade with another pair. Compare notes: did the same component break
+both apologies, or did a different one turn out to matter most in
+theirs? If your two examples disagree about which component is
+load-bearing, that disagreement is the finding, not a problem to resolve
+— write down what was different about the two situations that made a
+different component critical (who was harmed, how, and what they were
+actually owed).
+
+Afterwards, hold onto both your ablation result and the comparison.
 Later weeks will ask why a wronged person accepts a component-complete
-apology and still doesn't feel repaired — that question starts from
-knowing which component was carrying the apology in the first place.
+apology and still doesn't feel repaired — that question starts from being
+able to identify, case by case, which component that particular apology
+was actually resting on.

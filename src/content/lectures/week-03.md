@@ -1,9 +1,8 @@
 ---
 title: The Parts That Do the Work
 description:
-  Two apologies with the same four components present, one of which
-  reads as genuine and one of which doesn't — the difference is which
-  component is load-bearing versus decorative
+  Two apologies, two different components turn out to be doing the work
+  — an ablation test replaces the hunt for one universal hierarchy
 week: 3
 date: 2027-03-08
 teachers:
@@ -14,42 +13,62 @@ related:
 ---
 
 Week 2 established that an apology has four separable components and that
-a real one can still be missing one of them. It did not establish that the
-four matter equally. They don't.
+a real one can still be missing one of them. It did not say which
+component matters most — because there isn't a single answer. What breaks
+an apology depends on the apology.
 
-Compare two apologies, both containing all four components:
+Take two cases.
+
+**Case one** — after embarrassing someone in front of their family:
 
 > I know I embarrassed you in front of your family, and that's on me. I
 > feel awful about it. I'll check with you before I bring anything like
 > that up again.
 
-> I know I embarrassed you in front of your family. I feel awful about
-> it — genuinely, I've barely slept. That's just how it landed, I guess,
-> and I'll try to be more careful in future.
+Remove "that's on me" and the apology collapses into a description of the
+speaker's own feelings — no different from confessing you're upset about
+something you did, without owning it. Remove the emotional line instead
+and almost nothing changes; the apology is flatter but still works. Here,
+acceptance of responsibility is the component the apology can't do
+without.
 
-Both name the harm, both express regret, both gesture at future change.
-The difference is in the second component. The first says *that's on me*
-— a plain acceptance of responsibility, stated once and left alone. The
-second reroutes: "that's just how it landed" turns responsibility into an
-outcome that happened, not an act the speaker owns, and it does this
-directly after the most emotionally loaded sentence in the message, where
-it's least likely to be noticed. Strip responsibility from the first
-apology and it collapses into a description of someone's feelings. Strip
-regret from it instead, and it's terser, but it still functions as an
-apology.
+**Case two** — an automated notice after a delayed order:
 
-## Functional versus performative
+> We take full responsibility for this delay. Your refund has been
+> processed. We are updating our courier partnerships to prevent this in
+> future.
 
-Call a component **functional** if removing it changes whether the
-statement still works as an apology, and **performative** if removing it
-only changes tone. Acceptance of responsibility is functional in a way
-none of the other three reliably are — it's the one component whose
-absence a wronged person names first, and whose presence a canny
-apology-writer fakes when they can't manage the real thing (the corporate
-apology from Week 2 is exactly that: real remedy, faked
-responsibility). Regret and acknowledgment matter, but a flat, minimal
-version of either still lets an apology function. A flat, minimal version
-of responsibility — buried, hedged, or passive-voiced — usually doesn't.
+Every box is technically checked — responsibility named, remedy
+delivered, even a commitment to change — and it still reads as hollow,
+because nothing in it acknowledges that a person was inconvenienced.
+Restore one sentence, "we know this cost you time you didn't have to
+spend," and the same message reads as an apology instead of a transaction
+log. Here, responsibility and remedy were never the problem; the missing
+piece was acknowledgment of harm as something that happened *to someone*.
 
-That's the load-bearing part. It's also the part every remaining case
-study this semester will come back to first.
+## What the two cases show
+
+The same four components trade places in importance depending on the
+case. In case one, responsibility is functional and regret is close to
+decorative. In case two, responsibility and remedy are already handled,
+and the whole thing turns on whether harm is acknowledged as directed at
+a person rather than logged as an event. Neither case licenses a
+universal ranking — what a component's removal costs depends on what the
+wronged party in that specific situation was actually missing.
+
+## Function versus performance, without a fixed hierarchy
+
+Call a component **functional in a given case** if removing it changes
+whether the statement still works as an apology there, and
+**performative** if removing it only changes tone. The same component can
+be functional in one apology and merely performative in the next.
+Responsibility-acceptance turns up as functional more often than the
+other three across public examples, which is worth noticing — but "more
+often" is not "always," and treating it as the fixed answer would mean
+missing cases exactly like the refund notice, where responsibility was
+never what was missing.
+
+That's the method the rest of the semester runs on failed apologies: not
+"which component is missing," as if the answer were fixed in advance, but
+"which component was this specific apology actually resting on, and what
+happened to it."

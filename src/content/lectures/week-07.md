@@ -1,0 +1,65 @@
+---
+title: Timing and Medium Change the Words
+description:
+  The same sentence, sent two minutes after an argument and again three
+  weeks later — identical wording, and only one of them is doing anything
+week: 7
+date: 2027-04-05
+teachers:
+  - marisol-quaye
+related:
+  - sessions/07-same-words-different-delivery
+  - lectures/week-06
+---
+
+Same sentence, two different moments:
+
+> I'm sorry, I shouldn't have said that.
+
+Sent by text two minutes after an argument ends. Sent again, word for
+word, three weeks later, after no contact in between.
+
+The two-minute version has a problem the words don't show: two minutes
+isn't long enough to have learned anything new about why the comment
+landed the way it did. It can look less like understanding and more like
+a fast way to end the fight — Week 5's closure-seeking, in fourteen
+words.
+
+The three-week version could be read two ways, and the wording alone
+doesn't decide which. If the sender can now name something specific about
+why it was wrong that they couldn't have named on day one, the delay
+bought real understanding — the gap did something. If the three-week
+version says exactly what the two-minute version would have said, with
+nothing added, the delay produced nothing but distance, and now reads as
+three weeks of avoidance rather than three weeks of thinking. Same words,
+opposite verdicts, and no fixed number of minutes or weeks tells you which
+one you're looking at. What decides it is what happened in the gap, and
+the wording alone won't report that.
+
+## Medium changes what the recipient can do
+
+Compare delivery instead of delay: the same message, said face to face
+immediately, versus sent as a text.
+
+Face to face, the recipient can ask a follow-up question on the spot and
+can watch how it's delivered — but they can't reread it later to check
+the wording, and they have to decide how to respond with the other person
+standing there. By text, the recipient can reread it as many times as
+they want, reply on their own schedule, or show it to someone else for a
+second opinion — but they lose the chance to get a question answered in
+the moment.
+
+Neither trade is a strict improvement. Synchronous delivery — voice, face
+to face — gives real-time back-and-forth at the cost of putting the
+recipient on the spot. Asynchronous delivery — text, email — gives the
+recipient control of the pace at the cost of losing that back-and-forth
+entirely. "Written apologies are more considered" is only true when the
+extra time was actually spent thinking; "face to face is more sincere" is
+only true when the immediacy signals something real and not a rehearsed
+line delivered on cue.
+
+Week 6 showed that audience is one variable that can change what
+identical wording means. Timing and medium are two more — not packaging
+around a fixed message, but part of what the message ends up meaning.
+Who actually gets to choose the timing and the channel is itself worth
+asking, and that's where Week 8 starts.

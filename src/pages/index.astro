@@ -1,4 +1,5 @@
 ---
+import Callout from "astro-theme-university/components/Callout.astro";
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
@@ -21,17 +22,28 @@ import { sessionLabels, siteConfig } from "../site-config";
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
+  <Callout type="info">
+    <h2>The question this course keeps returning to</h2>
+    <p class="course-question">What makes an apology actually work?</p>
+  </Callout>
+
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    Every week, you take a real apology — public or personal, someone else's
+    or your own — and work out what it's actually doing: which parts are
+    present, who it actually serves, what timing and power did to it,
+    whether anything happened afterwards. You leave having diagnosed,
+    redesigned, and defended responses of your own, not having memorised a
+    formula.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Anyone interested in communication, language, conflict, online culture,
+    workplace behaviour, or the design of human interactions — no
+    specialist background required. You should be willing to look closely
+    at something as ordinary as "sorry" and find out it's more complicated
+    than you thought.
   </p>
 
   <h2>Where to go next</h2>
@@ -64,5 +76,12 @@ import { sessionLabels, siteConfig } from "../site-config";
     color: var(--at-text-secondary);
     background: var(--at-bg-alt);
     font-size: 0.9rem;
+  }
+
+  .course-question {
+    margin-block: 0;
+    font-size: clamp(1.35rem, 1.05rem + 1.2vw, 1.85rem);
+    font-weight: 700;
+    line-height: 1.3;
   }
 </style>

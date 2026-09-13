@@ -312,24 +312,31 @@ Prepares for: nothing further in the course, but sets up the final assessment (P
 
 ## Phase 3 — Assessment Design
 
-Design the assessment structure before completing the full curriculum content.
+Assessment weights must total 100%. Every assessment must test ideas genuinely taught by the course, avoid generic tasks that could be moved unchanged into an unrelated university course, and reinforce the identity of this particular course.
 
-For every assessment, establish:
+### 1. Apology Autopsy — 25%, due end of Week 5
 
-* title
-* task
-* purpose
-* weight
-* relevant course concepts
-* relationship to the teaching sequence
+Task: choose a real public apology not covered in class; diagnose it using the component model (Weeks 2–3) and the non-apology/self-serving-motive concepts (Weeks 4–5) — which components are present, absent, or hollow, and whether the apology serves the speaker more than the person harmed — then produce a redesigned version that would actually work.
+Purpose: tests whether students can apply the Movement A–C toolkit (what an apology is, what it's made of, why it fails) to an unseen case, not just recognise it in worked examples.
+Relevant concepts: apology as speech act, component model, functional vs. performative components, non-apology, self-serving apology.
+Relationship to teaching sequence: sits right after Movement C ends and before context (Movement D) complicates things — a checkpoint on the "failure" toolkit before power and context are added to it.
+Marking: weighted criteria (diagnostic accuracy against the component model; quality of the redesigned apology).
 
-Assessment weights must total 100%.
+### 2. The Constrained Apology — 35%, due end of Week 11
 
-Every assessment must test ideas genuinely taught by the course.
+Task: given a scenario with real constraints (public exposure, a power asymmetry, a delay already in place, or a case where an immediate apology may be the wrong move), decide whether, when, and how to apologise, and justify every decision — audience, timing, medium, and whether an apology belongs in the response at all — against the concepts from Weeks 6–11.
+Purpose: tests navigation of genuine trade-offs under context and power rather than applying a formula; the brief should admit more than one defensible answer, matching the Phase 1 rule against a single correct script.
+Relevant concepts: audience design, timing/medium, power asymmetry in obligation and forgiveness, repair vs. words, premature apology.
+Relationship to teaching sequence: due right after Movement F (Weeks 10–11), synthesising context, power, and repair before the capstone reopens "perfect."
+Marking: weighted criteria (quality of the justification against the stated constraints; coherence of the designed response).
 
-Avoid generic tasks that could be moved unchanged into an unrelated university course.
+### 3. Final Project: Reconsidering "Perfect" — 40%, due Week 12
 
-Assessment should reinforce the identity of this particular course.
+Task: a substantial apology-design report on a harm scenario of real complexity (may extend Assessment 2's scenario or a new one): full diagnosis, an argued decision on whether/when/how to apologise, and an explicit position on what "perfect" would mean in this case — directly engaging Week 12's return to the course title and the naive definition from Week 1.
+Purpose: whole-semester synthesis; the marking question is whether the student can argue against their own Week 1 assumptions using everything built since.
+Relevant concepts: all twelve weeks, explicitly the Week 1 → Week 12 return.
+Relationship to teaching sequence: capstone, due at the end of Week 12, directly following the synthesis week.
+Marking: holistic — judged as a whole against whether it earns its own reconsideration of "perfect," not against a checklist.
 
 ---
 

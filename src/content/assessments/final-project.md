@@ -1,38 +1,70 @@
 ---
-title: Final project
+title: 'Final Project: Reconsidering "Perfect"'
 description:
-  The capstone — a placeholder brief for the larger piece of work the semester
-  builds towards
+  A full apology-design report on a complex harm, closing with an argued
+  answer to what "perfect" turned out to mean, against your own Week 1 definition
 week: 12
 due: 2027-05-28T12:00:00+10:00
-weight: 60
+weight: 40
 marking:
   mode: holistic
   description:
-    The final project is judged as a whole against the brief, with particular
-    attention to whether the result stands alone and whether its scope fits the
-    semester that produced it.
+    Judged as a whole against whether it earns its own reconsideration of
+    "perfect" — not against a checklist of concepts mentioned. A report that
+    cites every week's terminology but never actually revises its Week 1
+    definition has not done the thing this project asks for.
 spec:
-  - submitted by the deadline, in the format named below
-  - it stands on its own, without you there to explain it
-  - it answers the brief rather than restating it
+  - a harm scenario of real complexity, either your Constrained Apology
+    scenario carried into its aftermath or a new one of comparable weight
+  - a full diagnosis using the semester's framework — components and their
+    function, audience, timing and medium, power, and what repair the harm
+    would actually require
+  - an argued decision on whether, when, and how a response happens, and an
+    explicit account of what "perfect" means for this specific case
+  - your own Week 1 one-sentence definition of apology, quoted, alongside a
+    direct argument for what it missed
+related:
+  - lectures/week-01
+  - lectures/week-12
 ---
 
-<!-- STARTER_CONTENT: replace this assessment brief, then remove this comment. -->
+> Take a harm complicated enough that no single week of this course could
+> resolve it on its own, and work out what a good response to it actually
+> requires.
 
-Replace this brief. The final project is where a course's weights usually
-concentrate, so it is worth being explicit about how the earlier work feeds it.
+This is where the semester's tools get used together, on something with
+enough moving parts that no single week's concept settles it alone. You
+have two options for the scenario: carry your Constrained Apology
+scenario forward into its aftermath — what actually happens after the
+response you designed, including whether it was accepted, whether it
+repaired anything, whether it should have looked different in hindsight —
+or choose a new scenario of comparable complexity if your Constrained
+Apology case has nothing left to say.
 
-## The brief
+## What the report has to do
 
-> One sentence, again as a blockquote.
+Diagnose the scenario using the full framework: which components are
+doing the work here and which are hollow, what function the response
+actually serves and for whom, how audience and power shape what's
+possible, what timing and medium do to the meaning of what's said, and
+what repair — beyond any apology — the harm would actually require. Then
+make an argued decision: whether a response happens, when, through what
+channel, and what it says, defended against the alternatives you didn't
+choose.
 
-Say what scope is realistic in the time available. A brief that quietly assumes
-twice the available hours is the most common way a capstone goes wrong.
+Close by returning to where the course started. Quote your own Week 1
+one-sentence definition of apology — the one you put your name to in the
+first session — and argue, using this specific scenario, what it got
+wrong or couldn't have accounted for. Then answer the course's own
+question directly: for this case, what would "perfect" actually mean? Not
+a formula that would work for the next case too — an argued position that
+only makes sense once you know exactly what happened, to whom, and what
+was possible afterwards.
 
 ## What you submit
 
-The artefact, and whatever a marker needs to run or read it.
-
-This one demonstrates the alternative marking mode: a holistic explanation
-rather than weighted criteria. The site renders either mode from frontmatter.
+The scenario (your own, or your carried-forward one), the diagnosis, the
+argued decision and response, and the closing section reconsidering your
+Week 1 definition. There's no required structure beyond that — a report
+that mechanically works through each week in order, without the sections
+actually building on each other, has not synthesised anything.

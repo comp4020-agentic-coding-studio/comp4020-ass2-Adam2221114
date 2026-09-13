@@ -206,24 +206,107 @@ Week 12 should return to the title of the course and allow students to reconside
 
 ## Phase 2 — Curriculum Structure
 
-Design the twelve-week progression before writing complete weekly pages.
+The twelve weeks must form a progression. They must not behave like twelve independent articles or twelve copies of the same lesson with different examples. Later weeks reuse, challenge, extend, or complicate ideas introduced earlier, and the final weeks return to questions introduced near the beginning and answer them differently.
 
-For every teaching week, establish:
+The twelve weeks map onto the seven-stage Semester Direction above, giving each stage one or two weeks:
 
-* week title
-* central question
-* key concept
-* how the week differs from other weeks
-* how it builds on earlier material
-* how it prepares for later material
+### Movement A — What is an apology? (Week 1)
 
-The twelve weeks must form a progression.
+**Week 1 — What Is an Apology, Actually?**
+Central question: What distinguishes an apology from regret, an excuse, or a justification?
+Key concept: apology as a distinct speech act, defined against its nearest neighbours.
+Different because: the only definitional/orienting week — establishes the vocabulary every later week depends on.
+Builds on: students' own naive folk model of "sorry" (the one named in Phase 1) — the week starts by taking that model apart.
+Prepares for: every later week; specifically Week 2's move from "what is it" to "what is it made of."
 
-They must not behave like twelve independent articles or twelve copies of the same lesson with different examples.
+### Movement B — What is an apology made of? (Weeks 2–3)
 
-Later weeks should reuse, challenge, extend, or complicate ideas introduced earlier.
+**Week 2 — Taking an Apology Apart**
+Central question: What are the separable components of an apology, and does it need all of them?
+Key concept: a component model — acknowledgment of harm, acceptance of responsibility, expression of regret, commitment to change/remedy.
+Different because: first analytical/decompositional week — builds a reusable framework rather than just examining examples.
+Builds on: Week 1's definition (you can't dismantle something until you know what counts as an instance of it).
+Prepares for: Week 3's ranking of those parts by function.
 
-Where appropriate, the final part of the course should return to questions introduced near the beginning and allow students to answer them differently.
+**Week 3 — The Parts That Do the Work**
+Central question: Which components actually repair harm, and which just perform contrition?
+Key concept: functional vs. performative components; responsibility-acceptance as the load-bearing part.
+Different because: moves from *listing* parts to *ranking* them — the first week with an explicit stance on what matters most.
+Builds on: Week 2's component vocabulary.
+Prepares for: Week 4, where "failure" is diagnosed as a hollow or missing load-bearing component.
+
+### Movement C — Why do apologies fail? (Weeks 4–5)
+
+**Week 4 — The Non-Apology**
+Central question: Why do apologies with all the "right" words still fail?
+Key concept: the near-apology/non-apology — conditional "sorry if," passive-voice deflection, "sorry you feel that way."
+Different because: case-study/close-reading week built on real public and interpersonal examples, not abstract framework-building.
+Builds on: Week 3's ranking — a non-apology is one where the load-bearing component is hollow.
+Prepares for: Week 5's question of *why* people produce these on purpose.
+
+**Week 5 — Whose Apology Is It?**
+Central question: Can an apology serve the speaker more than the person harmed?
+Key concept: self-serving apology / apology as reputation management vs. relational repair.
+Different because: shifts from analysing language to analysing motive and audience.
+Builds on: Week 4's non-apology patterns — this week supplies the motive behind them.
+Prepares for: Week 6 — a self-serving apology behaves differently in public than in private, which opens the context movement.
+
+### Movement D — How does context change an apology? (Weeks 6–7)
+
+**Week 6 — Public and Private Don't Apologise the Same Way**
+Central question: Does an apology mean the same thing said privately as said publicly?
+Key concept: audience design — an apology addresses the harmed party and observers simultaneously, and those addressees can pull in different directions.
+Different because: first week to treat *setting* as the variable, not wording or motive.
+Builds on: Week 5's self-serving apology — public delivery is exactly where that risk is highest.
+Prepares for: Week 7 extending "context" to timing and medium.
+
+**Week 7 — Timing and Medium Change the Words**
+Central question: Can the same sentence be a good apology on Tuesday and a bad one on Friday, or in person but not as a text message?
+Key concept: timing (promptness vs. delay) and medium (synchronous vs. asynchronous, written vs. spoken) as meaning-changing variables.
+Different because: second half of the context movement — adds temporal and channel variables on top of Week 6's audience variable.
+Builds on: Week 6's public/private distinction.
+Prepares for: Week 8 — control over timing and medium is itself a form of power, which opens the power movement.
+
+### Movement E — Who has the power to apologise, demand one, or reject one? (Weeks 8–9)
+
+**Week 8 — Who Has to Apologise?**
+Central question: Does power decide who is expected to apologise, and who is allowed to refuse?
+Key concept: power asymmetry in the obligation to apologise — hierarchy and status shaping whether an apology is demanded, expected, or excused.
+Different because: first week centred on relationship structure rather than delivery context.
+Builds on: Week 7's timing/medium — control over those was already a power signal, now made explicit.
+Prepares for: Week 9, which flips the lens to the recipient's power.
+
+**Week 9 — Who Gets to Accept It?**
+Central question: Who decides an apology is "enough," and can that power be abused?
+Key concept: forgiveness as a power held by the harmed party; performative or forced acceptance.
+Different because: flips the power question from the apologiser's obligation to the recipient's authority.
+Builds on: Week 8's obligation-side power analysis.
+Prepares for: Week 10 — if forgiveness isn't guaranteed, what actually repairs harm?
+
+### Movement F — What happens after sorry? (Weeks 10–11)
+
+**Week 10 — Saying Sorry Is Not Repairing Harm**
+Central question: If forgiveness isn't guaranteed and words alone don't fix things, what does?
+Key concept: repair as action distinct from apology-as-utterance — restitution, behaviour change, structural repair.
+Different because: the first week that moves the course past language entirely, into consequence and action.
+Builds on: Week 9's forgiveness-as-power — repair doesn't depend on being forgiven.
+Prepares for: Week 11's more radical claim that the apology itself can be the wrong move.
+
+**Week 11 — When Not to Apologise**
+Central question: Is there a situation where the most responsible response is not an immediate apology?
+Key concept: premature apology as pre-emption/damage control; silence or deferral as a responsible practice.
+Different because: deliberately counter-intuitive — every prior week assumed the apology should exist and be improved; this week challenges that assumption.
+Builds on: Week 10's repair-over-words framing.
+Prepares for: Week 12's closing reconsideration of "perfect."
+
+### Movement G — Can a perfect apology exist at all? (Week 12)
+
+**Week 12 — Can a Perfect Apology Exist?**
+Central question: After eleven weeks, does "perfect" even mean the same thing anymore?
+Key concept: synthesis — apology as a situational design problem rather than a fixed script; explicit return to the course title.
+Different because: capstone/synthesis week that deliberately revisits Week 1's naive definition and asks students to apply the full framework.
+Builds on: everything.
+Prepares for: nothing further in the course, but sets up the final assessment (Phase 3).
 
 ---
 

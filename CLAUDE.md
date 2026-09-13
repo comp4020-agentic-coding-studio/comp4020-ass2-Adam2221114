@@ -342,29 +342,29 @@ Marking: holistic — judged as a whole against whether it earns its own reconsi
 
 ## Phase 4 — Course Design Principles
 
-Before large-scale content generation, establish the principles that define a good version of this course.
+Principles are based on course-design decisions rather than generic software-development advice. Do not create a mechanical test for a subjective quality simply to make it appear measurable.
 
-These principles should be based on course-design decisions rather than generic software-development advice.
+### Group 1 — human judgement, stays as CLAUDE.md rules
 
-The course should normally satisfy the following principles:
+1. Every teaching week introduces a genuinely different problem, question, or conceptual development, judged against the Phase 2 progression — not a restatement of an earlier week's move under a new example.
+2. Later weeks reuse, challenge, extend, or complicate earlier material rather than starting cold, judged against each week's stated "builds on" relationship in Phase 2.
+3. Examples must serve the teaching point of the week they appear in. An example that could be swapped for any other apology story without changing the lesson has failed.
+4. Abstract claims (about power, motive, medium, timing) must be grounded in at least one concrete case per week; no week may stay purely abstract.
+5. Course content stays inside the Phase 1 niche: an idea belongs only if it is examined through the specific act of apologising, not communication, psychology, or PR in general.
+6. Repeated filler (restating a definition or example already used elsewhere) is removed even if a page would otherwise feel thin.
+7. Voice stays direct, observant, slightly deadpan, and specific per Phase 1's Voice and Tone section — beyond the literal banned phrases (Group 2), this is a judgement call.
+8. Pages do not repeat the same argument-and-structure shape (definition → examples → summary) purely because the content model allows it; each week's shape follows from what that week teaches.
+9. Each assessment task genuinely tests the skill its Phase 3 entry claims, not a generic task that merely carries the right weight and due date — whether the task itself teaches the right thing is judgement, even though its structural connections (Group 2) are checkable.
 
-* every teaching week introduces a genuinely different problem, question, or conceptual development
-* later material builds on earlier material rather than resetting each week
-* examples have a teaching purpose rather than acting as decoration
-* abstract claims should be supported by concrete cases where appropriate
-* assessment directly connects to ideas taught in the course
-* course content stays focused on the central idea
-* repeated filler should be removed
-* generic motivational or educational language should be avoided
-* the course should have a recognisable and consistent voice
-* pages should not repeat the same argument and structure simply because the content model allows it
+### Group 2 — mechanical, becomes spec/ tests (Phase 5)
 
-Separate important principles into two groups:
-
-1. principles that require human judgement and remain rules in `CLAUDE.md`
-2. promises that can be reliably checked and should become tests in `spec/`
-
-Do not create a mechanical test for a subjective quality simply to make it appear measurable.
+1. None of the banned phrases from Phase 1 ("communication is key", "in today's fast-paced world", "it is important to remember", "there is no one-size-fits-all approach", "at the end of the day", "authenticity is essential") appears verbatim in any session, lecture, or assessment body.
+2. Exactly twelve `sessions` entries and twelve `lectures` entries exist, one per week 1–12, no gaps or duplicates.
+3. The three assessments' `weight` fields sum to exactly 100.
+4. Each assessment has at least one `related:` edge into a session or lecture (structural connection to taught content — whether it connects *well* stays Group 1 judgement).
+5. The course code keeps digits `003` and its first digit is `8`.
+6. No `STARTER_CONTENT` marker remains in any shipped content file.
+7. At least one lecture deck exists under `src/decks/` and is linked from its lecture page.
 
 ---
 

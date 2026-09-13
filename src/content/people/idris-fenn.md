@@ -1,8 +1,8 @@
 ---
 title: Idris Fenn
 description:
-  A tutor working across the course's first reviews and the practical work that
-  follows them.
+  A tutor teaching the weeks that stress-test an apology once it exists —
+  its components, its audience, its power, and what happens after it.
 affiliation: Slop University School of Invented Disciplines
 role: tutor
 email: idris.fenn@slop.university
@@ -11,7 +11,13 @@ photo: ./idris-fenn.avif
 photoAlt: A stylised portrait of a person facing the viewer, flat gold and black shapes on warm cream, in a two-ink risograph print
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Idris teaches the weeks that put Marisol's material under pressure:
+taking an apology's components apart and finding out which one breaks
+first (Weeks 2 and 4), reading who an apology is actually for once it
+goes public (Week 6), what power does to who has to say sorry (Week 8),
+and what a harm still needs after the apology is over (Week 10). He also
+co-teaches Week 12.
 
-Replace this entry. A second person makes the listing, role ordering and
-teacher-reference fields visible before you replace the cast with your own.
+Ask him about anything you're actually building — a session exercise
+that isn't landing, or an assessment brief that's unclear about what
+counts as done. That's closer to what he spends most weeks doing.

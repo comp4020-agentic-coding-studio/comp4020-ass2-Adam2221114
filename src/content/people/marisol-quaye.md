@@ -1,8 +1,8 @@
 ---
 title: Marisol Quaye
 description:
-  The founding convenor, responsible for the course's shape and its weekly
-  teaching programme.
+  The convenor, teaching the weeks that introduce each new complication —
+  definition, function, motive, timing, and who gets to accept an apology.
 affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: marisol.quaye@slop.university
@@ -11,11 +11,14 @@ photo: ./marisol-quaye.avif
 photoAlt: A stylised portrait of a person in three-quarter view, flat gold and black shapes on warm cream, in a two-ink risograph print
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Marisol designed this course and teaches the weeks where the semester's
+central question gets a new complication: what an apology actually is
+(Week 1), what work its parts are doing (Week 3), whose interests it
+might really serve (Week 5), what timing and medium do to it (Week 7),
+and who gets to decide it counted (Week 9). She also co-teaches Week 12,
+where all of that gets argued back into one position.
 
-Replace this entry. A people page carries a short bio and whatever a student
-needs in order to contact the right person for the right thing --- and nothing
-that will be stale by week 3.
-
-Consultation hours, contact preferences and the escalation path (who to ask
-first, who to ask when that does not work) are the parts students actually read.
+If your question is about where the course is going, why a week exists,
+or something about the semester as a whole, ask her. Questions about a
+specific piece of work in progress are better asked in the session
+closest to when you're actually doing it.

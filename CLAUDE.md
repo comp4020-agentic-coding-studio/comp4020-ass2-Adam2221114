@@ -402,25 +402,53 @@ Those qualities require human review.
 
 ## Phase 6 — Content Architecture
 
-Inspect the starter content model before producing large amounts of content.
+The four starter collections (`sessions`, `assessments`, `lectures`, `people`) and the `policies` page stay exactly as `content.config.ts` defines them — nothing about this course needs a new collection or a schema change.
 
-Plan how the course uses:
+### Content types and what they carry
 
-* home page
-* twelve teaching weeks
-* lectures
-* lecture decks
-* assessments
-* policies
-* navigation
-* course-specific pages
-* course-specific components
+* **sessions** — the weekly in-room meeting: the applied/discussion side of each week, with the `spec:` list of what a student brings.
+* **lectures** — the taught-concept side of each week; the one deck slot lives here via `slides:`.
+* **assessments** — the three Phase 3 tasks, using `week`, `due`, `weight`, `marking`, `related:`.
+* **people** — the fictional teaching team; unrelated to the apology content itself, but still real content the STARTER_CONTENT check covers.
+* **policies** (ordinary page, not a graph collection) — where an assessment brief points for late-work/integrity rules.
 
-Use the provided content model rather than rebuilding the platform unnecessarily.
+### Placeholder files Phase 7/8 will replace
 
-New pages or components should exist because the course needs them, not merely to make the site appear more complex.
+`src/course-config.ts`; `src/content/sessions/01-getting-started.md` and `02-first-review.md` (2 of 12); `src/content/lectures/week-01.md` and `week-02.md` (2 of 12); `src/content/assessments/assignment-1.md` and `final-project.md` — the starter ships 2 files but Phase 3 needs 3: retire `assignment-1.md`, add `apology-autopsy.md` and `constrained-apology.md`, keep the `final-project.md` slug; `src/content/people/idris-fenn.md` and `marisol-quaye.md` (+ photos) — keep as two teaching-team entries, replace bio/role copy; `src/pages/policies/index.mdx`; `src/pages/index.astro` (hero alt text, body copy); `src/decks/week-01.deck.mdx` (content written in Phase 8).
 
-Do not replace fixed SlopU platform features unless the brief or starter explicitly permits it.
+### Twelve weeks → sessions and lectures
+
+Each Phase 2 week becomes one `sessions` entry + one `lectures` entry, cross-linked with `related:` (not just matching `week` numbers, since that's what the generated API's edge graph and the Phase 5 "assessment connections" test actually walk). Lecture slugs keep the starter's `week-01` … `week-12` pattern; session slugs keep the starter's descriptive pattern, `NN-`-prefixed for correct sorting (e.g. `01-what-is-an-apology`, `02-taking-an-apology-apart`, …).
+
+### Lecture deck
+
+The one required real deck (Group 2 promise #7) stays where the starter already wires it: `lectures/week-01` → `slides: /decks/week-01/` → `src/decks/week-01.deck.mdx`. Week 1 is also the right week for it — the orienting week every later week depends on. Content is written in Phase 8. No other week needs a deck to satisfy the promise.
+
+### Assessments → weeks/concepts
+
+| Slug | week | due | related anchors |
+|---|---|---|---|
+| `apology-autopsy` | 5 | end of Week 5 | weeks 3 & 5 (component ranking; self-serving motive) |
+| `constrained-apology` | 11 | end of Week 11 | weeks 7 & 11 (timing/medium; when not to apologise) |
+| `final-project` | 12 | Week 12 | weeks 1 & 12 (naive definition; capstone return) |
+
+Phase 7 may anchor an assessment to one or two additional weeks if the brief text calls for it; every assessment must resolve to at least one real session/lecture edge (Group 2 promise #4).
+
+### Navigation and labels
+
+The existing nav (`Lectures`, `Sessions`, `Assessment`, `People`, `Policies`) already matches the four collections plus the policy page — no new top-level nav item. `sessionLabels` changes from the generic "Session"/"Sessions" to **"Workshop"/"Workshops"**, matching how students actually spend that time: examining cases, making distinctions, comparing redesigned apologies. Done alongside Phase 7 content.
+
+### Home page
+
+Keep the `ContentLayout` + tag list + `CardGrid` "where to go next" structure — only the content slots change: hero alt text; "What you will do" (Phase 1's premise — diagnosing, redesigning, defending real apologies); "Who it is for" (Phase 1's "Intended Students"); and a new prominent surfacing of the Central Course Question ("What makes an apology actually work?") near the top, using the existing `Callout` component, since Phase 1 says this question "should remain visible throughout the semester."
+
+### A genuinely useful course-specific addition
+
+Phase 2 groups the 12 weeks into 7 named Movements (A–G) as its core progression device, but `SessionsGrid`/`LecturesGrid` currently render a flat, week-sorted list with no sign of that grouping. Phase 8 should group the Sessions/Lectures index by Movement (a `movement`/`movementTitle` frontmatter field, passed through by the existing `.loose()` schema, plus a grouped-rendering change to those two components) — this demonstrates "progression, not a list" using only the existing content model. A `/glossary/` page for the course's coined vocabulary is a secondary, lower-priority idea for the same phase, not a requirement.
+
+### Platform-level elements that stay untouched
+
+The Astro build pipeline and `astro.config.ts`; `astro-theme-slop` branding and palette; base-path handling; the axe/link-checker/dangling-ref build checks; the deck compiler; the generated `/api` shape and `astro-course-university` integration; `content.config.ts`'s collection keys and schemas; `graphCollections`/`courseApiCollections`; the `PageLayout`/`ContentLayout` layouts; the `Card`/`CardGrid`/`RelatedContent`/`SpecList`/`Callout`/`MarkingModel`/`TeachingTeam` components' internal behaviour; `formatCourseDate`/`withBase`; `spec/data-integrity.test.ts`; `.githooks/pre-commit`; `mise.toml`'s pinned versions.
 
 ---
 

@@ -56,9 +56,19 @@ describe("banned phrases", () => {
     "authenticity is essential",
   ];
 
+  // Derived live from dist/api/index.json at test-run time, not a hardcoded
+  // id list, so this set grows to cover every session, lecture and
+  // assessment as they're authored, not just the placeholders that exist
+  // today.
   const taughtContent = api.nodes.filter((node) =>
     ["sessions", "lectures", "assessments"].includes(node.type),
   );
+
+  it("has at least one node to check", () => {
+    // Guards against the it.each below silently running zero cases (and so
+    // reporting green) if the taught-content set were ever empty.
+    expect(taughtContent.length).toBeGreaterThan(0);
+  });
 
   it.each(taughtContent.map((node) => [node.id]))("%s avoids the banned-phrase list", (id) => {
     const body = nodeBody(id).toLowerCase();
@@ -116,14 +126,45 @@ describe("starter content", () => {
 });
 
 describe("lecture deck", () => {
-  it("has at least one real deck, linked from its lecture", () => {
-    const linked = byType("lectures").filter((node) => typeof node.meta?.slides === "string");
-    expect(linked.length, "no lecture links a deck").toBeGreaterThan(0);
+  const linked = byType("lectures").filter((node) => typeof node.meta?.slides === "string");
 
-    const existing = linked.filter((node) => {
-      const match = /^\/decks\/([a-z0-9-]+)\/$/.exec(node.meta!.slides as string);
-      return match !== null && existsSync(resolve(`src/decks/${match[1]}.deck.mdx`));
+  it("has at least one lecture linking to a deck", () => {
+    expect(linked.length, "no lecture links a deck").toBeGreaterThan(0);
+  });
+
+  const deckSlugs = linked
+    .map((node) => /^\/decks\/([a-z0-9-]+)\/$/.exec(node.meta!.slides as string)?.[1])
+    .filter((slug): slug is string => slug !== undefined);
+
+  it("every linked slides path matches the expected /decks/<slug>/ shape", () => {
+    expect(deckSlugs.length, "a lecture's slides path doesn't match /decks/<slug>/").toBe(linked.length);
+  });
+
+  // A qualifying deck must exist on disk, carry no STARTER_CONTENT marker,
+  // and have real slide structure: at least a few slides, each with content
+  // beyond a bare heading or an MDX comment. Slide count comes from splitting
+  // on the `---` lines the deck format itself uses as slide boundaries (the
+  // first pair delimits frontmatter, not a slide), so this reads the deck's
+  // own structure rather than counting words.
+  it.each(deckSlugs.map((slug) => [slug]))("%s is a real, finished deck", (slug) => {
+    const path = resolve(`src/decks/${slug}.deck.mdx`);
+    expect(existsSync(path), `${path} does not exist`).toBe(true);
+
+    const source = readFileSync(path, "utf8");
+    expect(source, `${slug} still has a STARTER_CONTENT marker`).not.toContain("STARTER_CONTENT");
+
+    const [, , ...slides] = source.split(/^---$/m);
+    expect(slides.length, `${slug} has too few slides for a lecture deck`).toBeGreaterThanOrEqual(3);
+
+    slides.forEach((slide, index) => {
+      const content = slide
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0 && !line.startsWith("#") && !line.startsWith("{/*"));
+      expect(
+        content.length,
+        `${slug} slide ${index + 1} has no content beyond a heading or comment`,
+      ).toBeGreaterThan(0);
     });
-    expect(existing.length, "linked deck does not exist under src/decks/").toBeGreaterThan(0);
   });
 });

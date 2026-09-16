@@ -17,18 +17,31 @@ const groups = groupByMovement(visible);
         <span class="movement-tag">Movement {movement.letter}</span>
         {movement.title}
       </h2>
-      <CardGrid columns={2}>
-        {items.map((session) => (
-          <Card headingLevel="h3" title={session.data.title} href={`/sessions/${session.id}/`}>
-            {session.data.description && <p>{session.data.description}</p>}
+      {items.length === 1 ? (
+        <div class="movement-solo">
+          <Card headingLevel="h3" title={items[0].data.title} href={`/sessions/${items[0].id}/`}>
+            {items[0].data.description && <p>{items[0].data.description}</p>}
             <p>
               <small>
-                Week {session.data.week} · {formatCourseDate(session.data.date)}
+                Week {items[0].data.week} · {formatCourseDate(items[0].data.date)}
               </small>
             </p>
           </Card>
-        ))}
-      </CardGrid>
+        </div>
+      ) : (
+        <CardGrid columns={2}>
+          {items.map((session) => (
+            <Card headingLevel="h3" title={session.data.title} href={`/sessions/${session.id}/`}>
+              {session.data.description && <p>{session.data.description}</p>}
+              <p>
+                <small>
+                  Week {session.data.week} · {formatCourseDate(session.data.date)}
+                </small>
+              </p>
+            </Card>
+          ))}
+        </CardGrid>
+      )}
     </section>
   ))
 }
@@ -58,5 +71,9 @@ const groups = groupByMovement(visible);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--at-text-secondary);
+  }
+
+  .movement-solo {
+    max-width: 20rem;
   }
 </style>

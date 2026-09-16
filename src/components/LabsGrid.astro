@@ -1,0 +1,21 @@
+---
+import { getPublishedCollection } from "astro-course-university/content";
+import Card from "astro-theme-university/components/Card.astro";
+import CardGrid from "astro-theme-university/components/CardGrid.astro";
+
+const labs = await getPublishedCollection("labs");
+const visible = labs.sort((a, b) => a.data.number - b.data.number);
+---
+
+<CardGrid columns={2}>
+  {
+    visible.map((lab) => (
+      <Card headingLevel="h2" title={`Lab ${lab.data.number}: ${lab.data.title}`} href={`/labs/${lab.id}/`}>
+        {lab.data.description && <p>{lab.data.description}</p>}
+        <p>
+          <small>Weight: {lab.data.weight}%</small>
+        </p>
+      </Card>
+    ))
+  }
+</CardGrid>

@@ -312,7 +312,9 @@ Prepares for: nothing further in the course, but sets up the final assessment (P
 
 ## Phase 3 — Assessment Design
 
-Assessment weights must total 100%. Every assessment must test ideas genuinely taught by the course, avoid generic tasks that could be moved unchanged into an unrelated university course, and reinforce the identity of this particular course.
+Assessment weights, together with Labs (Phase 6), must total 100%. Every assessment must test ideas genuinely taught by the course, avoid generic tasks that could be moved unchanged into an unrelated university course, and reinforce the identity of this particular course.
+
+> **Update:** after Labs were added as a fifth graded component (Phase 6), the three assessments below were rebalanced from 25/35/40 to 25/35/30 so that assessments (90%) + Labs (10%) still total 100%. Only the Final Project's weight changed.
 
 ### 1. Apology Autopsy — 25%, due end of Week 5
 
@@ -330,7 +332,7 @@ Relevant concepts: audience design, timing/medium, power asymmetry in obligation
 Relationship to teaching sequence: due right after Movement F (Weeks 10–11), synthesising context, power, and repair before the capstone reopens "perfect."
 Marking: weighted criteria (quality of the justification against the stated constraints; coherence of the designed response).
 
-### 3. Final Project: Reconsidering "Perfect" — 40%, due Week 12
+### 3. Final Project: Reconsidering "Perfect" — 30%, due Week 12
 
 Task: a substantial apology-design report on a harm scenario of real complexity (may extend Assessment 2's scenario or a new one): full diagnosis, an argued decision on whether/when/how to apologise, and an explicit position on what "perfect" would mean in this case — directly engaging Week 12's return to the course title and the naive definition from Week 1.
 Purpose: whole-semester synthesis; the marking question is whether the student can argue against their own Week 1 assumptions using everything built since.
@@ -358,13 +360,14 @@ Principles are based on course-design decisions rather than generic software-dev
 
 ### Group 2 — mechanical, becomes spec/ tests (Phase 5)
 
-1. None of the banned phrases from Phase 1 ("communication is key", "in today's fast-paced world", "it is important to remember", "there is no one-size-fits-all approach", "at the end of the day", "authenticity is essential") appears verbatim in any session, lecture, or assessment body.
-2. Exactly twelve `sessions` entries and twelve `lectures` entries exist, one per week 1–12, no gaps or duplicates.
-3. The three assessments' `weight` fields sum to exactly 100.
+1. None of the banned phrases from Phase 1 ("communication is key", "in today's fast-paced world", "it is important to remember", "there is no one-size-fits-all approach", "at the end of the day", "authenticity is essential") appears verbatim in any session, lecture, assessment, or lab body.
+2. Exactly twelve `sessions` entries and twelve `lectures` entries exist, one per week 1–12, no gaps or duplicates. (Labs intentionally has ten entries, weeks 2–11 — see Phase 6.)
+3. The three assessments' `weight` fields sum to exactly 90, and the ten labs' `weight` fields sum to exactly 10 — together, 100.
 4. Each assessment has at least one `related:` edge into a session or lecture (structural connection to taught content — whether it connects *well* stays Group 1 judgement).
-5. The course code keeps digits `003` and its first digit is `8`.
-6. No `STARTER_CONTENT` marker remains in any shipped content file.
-7. At least one lecture deck exists under `src/decks/` and is linked from its lecture page.
+5. Each lab has at least one `related:` edge into its own week's session or lecture.
+6. The course code keeps digits `003` and its first digit is `8`.
+7. No `STARTER_CONTENT` marker remains in any shipped content file.
+8. At least one lecture deck exists under `src/decks/` and is linked from its lecture page.
 
 ---
 
@@ -402,13 +405,14 @@ Those qualities require human review.
 
 ## Phase 6 — Content Architecture
 
-The four starter collections (`sessions`, `assessments`, `lectures`, `people`) and the `policies` page stay exactly as `content.config.ts` defines them — nothing about this course needs a new collection or a schema change.
+> **Update:** the original version of this section said "nothing about this course needs a new collection." That was superseded deliberately: a fifth collection, `labs`, was added for a graded practical component (ten 1%-weighted labs, one per concept, weeks 2–11) — see below. The four original starter collections (`sessions`, `assessments`, `lectures`, `people`) and the `policies` page are otherwise unchanged.
 
 ### Content types and what they carry
 
 * **sessions** — the weekly in-room meeting: the applied/discussion side of each week, with the `spec:` list of what a student brings.
 * **lectures** — the taught-concept side of each week; the one deck slot lives here via `slides:`.
 * **assessments** — the three Phase 3 tasks, using `week`, `due`, `weight`, `marking`, `related:`.
+* **labs** — ten short hands-on exercises, one per taught concept (weeks 2–11, skipping the orientation and capstone weeks), each worth 1% (`number`, `week`, `weight`, `related:`). Detailed instructions are filled in one lab at a time; only the theme and one-sentence purpose are set initially.
 * **people** — the fictional teaching team; unrelated to the apology content itself, but still real content the STARTER_CONTENT check covers.
 * **policies** (ordinary page, not a graph collection) — where an assessment brief points for late-work/integrity rules.
 
@@ -434,9 +438,28 @@ The one required real deck (Group 2 promise #7) stays where the starter already 
 
 Phase 7 may anchor an assessment to one or two additional weeks if the brief text calls for it; every assessment must resolve to at least one real session/lecture edge (Group 2 promise #4).
 
+### Labs → weeks/concepts
+
+Ten labs, `lab-01` … `lab-10`, one per week 2–11 (weeks 1 and 12 are the orientation and capstone weeks and don't get a lab), each `related:` to that week's own lecture and session:
+
+| Lab | week | title |
+|---|---|---|
+| `lab-01` | 2 | Component Teardown |
+| `lab-02` | 3 | The Ablation Test |
+| `lab-03` | 4 | Spot the Non-Apology |
+| `lab-04` | 5 | Who Does This Serve? |
+| `lab-05` | 6 | One Apology, Two Audiences |
+| `lab-06` | 7 | Same Words, Different Clock |
+| `lab-07` | 8 | Who's Expected to Go First |
+| `lab-08` | 9 | Forgiveness on Whose Terms |
+| `lab-09` | 10 | Words vs. Actions |
+| `lab-10` | 11 | Should You Even Apologise? |
+
+Each lab's theme is its week's own "Key concept" from Phase 2, turned into a short hands-on exercise rather than a discussion or a lecture. Detailed instructions, steps, and materials are written one lab at a time, starting from Lab 1, not generated all at once (same incremental-content rule as Phase 7).
+
 ### Navigation and labels
 
-The existing nav (`Lectures`, `Sessions`, `Assessment`, `People`, `Policies`) already matches the four collections plus the policy page — no new top-level nav item. `sessionLabels` changes from the generic "Session"/"Sessions" to **"Workshop"/"Workshops"**, matching how students actually spend that time: examining cases, making distinctions, comparing redesigned apologies. Done alongside Phase 7 content.
+The nav is `Lectures`, `Sessions`, `Labs`, `Assessment`, `People`, `Policies` — `Labs` was added as a new top-level item, positioned with the other per-week content (Lectures/Sessions) ahead of the graded-work tier. `sessionLabels` changes from the generic "Session"/"Sessions" to **"Workshop"/"Workshops"**, matching how students actually spend that time: examining cases, making distinctions, comparing redesigned apologies. Done alongside Phase 7 content.
 
 ### Home page
 
@@ -448,7 +471,9 @@ Phase 2 groups the 12 weeks into 7 named Movements (A–G) as its core progressi
 
 ### Platform-level elements that stay untouched
 
-The Astro build pipeline and `astro.config.ts`; `astro-theme-slop` branding and palette; base-path handling; the axe/link-checker/dangling-ref build checks; the deck compiler; the generated `/api` shape and `astro-course-university` integration; `content.config.ts`'s collection keys and schemas; `graphCollections`/`courseApiCollections`; the `PageLayout`/`ContentLayout` layouts; the `Card`/`CardGrid`/`RelatedContent`/`SpecList`/`Callout`/`MarkingModel`/`TeachingTeam` components' internal behaviour; `formatCourseDate`/`withBase`; `spec/data-integrity.test.ts`; `.githooks/pre-commit`; `mise.toml`'s pinned versions.
+The Astro build pipeline and `astro.config.ts`; `astro-theme-slop` branding and palette; base-path handling; the axe/link-checker/dangling-ref build checks; the deck compiler; the generated `/api` shape and `astro-course-university` integration; the `PageLayout`/`ContentLayout` layouts; the `Card`/`CardGrid`/`RelatedContent`/`SpecList`/`Callout`/`MarkingModel`/`TeachingTeam` components' internal behaviour; `formatCourseDate`/`withBase`; `spec/data-integrity.test.ts`; `.githooks/pre-commit`; `mise.toml`'s pinned versions.
+
+`content.config.ts`'s collection keys/schemas and `graphCollections`/`courseApiCollections` are **no longer** on this "untouched" list — they were deliberately extended once, to add the `labs` collection above. No further collections should be added without the same deliberate process.
 
 ---
 
@@ -588,3 +613,22 @@ Course-specific rules should describe things such as:
 Do not invent course-specific rules before the relevant course-design decision has actually been made.
 
 When these rules are established, prefer precise statements over vague instructions such as “make it engaging”, “make it professional”, or “make it better”.
+
+---
+
+## Update Logbook
+
+A running record of work sessions on this project, kept in chronological order. Each entry logs what was completed and, where relevant, what's queued up next so a session can pick up cold.
+
+### Done
+
+* **Labs feature added.** A fifth graded collection, `labs`, was introduced (see Phase 6's "Update" note above): 10 labs, each worth 1%, mapped one-to-one onto Weeks 2–11 (skipping the Week 1 orientation and Week 12 capstone weeks), each grounded in that week's own Phase 2 "key concept." `Labs` was added as a new top-level nav item (Lectures → Sessions → Labs → Assessment → People). Assessment weights were rebalanced to make room: only the Final Project changed, 40% → 30% (Apology Autopsy 25% and Constrained Apology 35% unchanged), so assessments (90%) + Labs (10%) = 100%. `spec/course-design.test.ts` was updated to check the new weight split and a labs → session/lecture connection requirement. Only the 10 lab *themes* and one-sentence purposes were written — no lab yet has its detailed instructions, steps, images, or quiz questions (see below).
+
+### Queued next (in this order)
+
+1. **Home page UI polish.** General visual refinement pass on `src/pages/index.astro` beyond the card-grid sections already built.
+2. **Enrich weekly Sessions/Lectures content.** Add more substantial teaching text to each week's session and lecture pages; add images where they genuinely support the material.
+3. **Course timeline.** Add a timeline view of the 12 teaching weeks showing each assessment's and each lab's due date.
+4. **Per-lab tutorial content + quiz.** For each of the 10 labs: write the actual tutorial text and images, and add 3 multiple-choice questions per lab where a learner gets immediate correct/incorrect feedback right after submitting an answer.
+
+When resuming, read this Logbook first, then pick up at the top of "Queued next."

@@ -5,7 +5,7 @@ description:
   answer to what "perfect" turned out to mean, against your own Week 1 definition
 week: 12
 due: 2027-05-28T12:00:00+10:00
-weight: 40
+weight: 30
 marking:
   mode: holistic
   description:

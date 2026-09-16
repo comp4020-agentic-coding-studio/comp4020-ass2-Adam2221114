@@ -28,22 +28,96 @@ import { sessionLabels, siteConfig } from "../site-config";
 
   <h2>What you will do</h2>
   <p>
-    Every week, you take a real apology — public or personal, someone else's
-    or your own — and work out what it's actually doing: which parts are
-    present, who it actually serves, what timing and power did to it,
-    whether anything happened afterwards. You leave having diagnosed,
-    redesigned, and defended responses of your own, not having memorised a
-    formula.
+    Every week you take a real apology — public or personal, someone else's
+    or your own — and put it through the same four-stage cycle. It isn't a
+    formula to memorise; it's the shape of the thinking every assignment in
+    this course asks for.
   </p>
+  <div class="info-card-grid">
+    <div class="info-card">
+      <p class="info-card-eyebrow">Stage 01</p>
+      <h3 class="info-card-title">Read the situation</h3>
+      <p class="info-card-body">
+        You start with what actually happened: who was harmed, who's
+        speaking, and whether an apology is even the right response.
+        Nothing gets drafted before this is settled.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">Stage 02</p>
+      <h3 class="info-card-title">Build the apology</h3>
+      <p class="info-card-body">
+        Acknowledgement, responsibility, explanation, and repair are
+        separate moving parts, and timing decides how they land. You
+        assemble a version where each piece is actually doing work.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">Stage 03</p>
+      <h3 class="info-card-title">Stress-test it</h3>
+      <p class="info-card-body">
+        The same wording can succeed in private and fail in public, or the
+        other way round. You check it against audience, power, and
+        context, and look for the phrasing that would make things worse.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">Stage 04</p>
+      <h3 class="info-card-title">Revise and deliver</h3>
+      <p class="info-card-body">
+        Feedback exposes what the first draft missed. You revise tone,
+        medium, and timing until it's something you'd actually be willing
+        to send — not just something that reads well.
+      </p>
+    </div>
+  </div>
 
   <h2>Who it is for</h2>
   <p>
-    Anyone interested in communication, language, conflict, online culture,
-    workplace behaviour, or the design of human interactions — no
-    specialist background required. You should be willing to look closely
-    at something as ordinary as "sorry" and find out it's more complicated
-    than you thought.
+    This isn't only for people who want to get better at apologising
+    personally — it's for anyone who ends up designing, evaluating, or
+    responding to apologies as part of what they do. If one of these
+    sounds like you, the material has somewhere to land.
   </p>
+  <div class="info-card-grid">
+    <div class="info-card">
+      <p class="info-card-eyebrow">For writers &amp; communicators</p>
+      <h3 class="info-card-title">Communicators</h3>
+      <p class="info-card-body">
+        If you already think about how wording and framing change what a
+        message does, apology is one of the clearest cases to study — the
+        stakes make every choice visible.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">For product &amp; service people</p>
+      <h3 class="info-card-title">Designers and builders</h3>
+      <p class="info-card-body">
+        Products, services, and systems fail. This course is about
+        exactly the moment after that — the support message, the public
+        statement, the incident report — and what makes it land or
+        backfire.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">For team members &amp; leads</p>
+      <h3 class="info-card-title">Team members and leaders</h3>
+      <p class="info-card-body">
+        Conflict, feedback, and responsibility come up in every team. This
+        course gives you a way to think about who owes what to whom, and
+        why some corrections land while others don't.
+      </p>
+    </div>
+    <div class="info-card">
+      <p class="info-card-eyebrow">For the curious</p>
+      <h3 class="info-card-title">Curious skeptics</h3>
+      <p class="info-card-body">
+        You've noticed some apologies land and others make things worse,
+        and you want a real account of why — the actual mechanics of what's
+        said and what it does, not generic reassurance.
+      </p>
+    </div>
+  </div>
 
   <h2>Where to go next</h2>
   <CardGrid columns={2}>
@@ -108,5 +182,46 @@ import { sessionLabels, siteConfig } from "../site-config";
     --at-accent-soft: color-mix(in oklab, var(--at-primary) 12%, var(--at-bg));
     padding: 1.75rem 2rem;
     border-block-start-width: 3px;
+  }
+
+  .info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: 1.25rem;
+    margin-block: 1.25rem 2rem;
+  }
+
+  .info-card {
+    padding: 1.5rem 1.75rem;
+    border: 1px solid var(--at-border);
+    border-radius: 1rem;
+    background: linear-gradient(
+      155deg,
+      color-mix(in oklab, var(--at-primary) 4%, var(--at-bg)) 0%,
+      color-mix(in oklab, var(--at-primary) 10%, var(--at-bg)) 100%
+    );
+  }
+
+  .info-card-eyebrow {
+    margin-block: 0 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--at-text-secondary);
+  }
+
+  .info-card-title {
+    margin-block: 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--at-primary);
+  }
+
+  .info-card-body {
+    margin-block: 0;
+    color: var(--at-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 </style>

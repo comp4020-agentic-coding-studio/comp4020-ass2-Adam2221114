@@ -70,6 +70,17 @@ export const collections = {
       .loose(),
   }),
 
+  labs: defineCollection({
+    loader: courseNodeLoader("labs"),
+    schema: courseNodeSchema
+      .extend({
+        number: z.number().int().min(1).max(10),
+        week: weekSchema,
+        weight: z.literal(1).default(1),
+      })
+      .loose(),
+  }),
+
   people: defineCollection({
     loader: courseNodeLoader("people"),
     schema: ({ image }) =>

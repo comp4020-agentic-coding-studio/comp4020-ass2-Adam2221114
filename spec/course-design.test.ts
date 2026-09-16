@@ -61,7 +61,7 @@ describe("banned phrases", () => {
   // assessment as they're authored, not just the placeholders that exist
   // today.
   const taughtContent = api.nodes.filter((node) =>
-    ["sessions", "lectures", "assessments"].includes(node.type),
+    ["sessions", "lectures", "assessments", "labs"].includes(node.type),
   );
 
   it("has at least one node to check", () => {
@@ -89,26 +89,50 @@ describe("twelve teaching weeks", () => {
 });
 
 describe("assessment weights", () => {
-  it("sum to exactly 100", () => {
+  it("assessments sum to exactly 90", () => {
     const total = byType("assessments").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
-    expect(total).toBe(100);
+    expect(total).toBe(90);
+  });
+
+  it("labs sum to exactly 10 (1% each, ten labs)", () => {
+    const total = byType("labs").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
+    expect(total).toBe(10);
+  });
+
+  it("assessments and labs together sum to exactly 100", () => {
+    const assessmentsTotal = byType("assessments").reduce(
+      (sum, node) => sum + Number(node.meta?.weight ?? 0),
+      0,
+    );
+    const labsTotal = byType("labs").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
+    expect(assessmentsTotal + labsTotal).toBe(100);
   });
 });
 
+const expectEveryNodeConnectedToTeaching = (type: string) => {
+  const nodes = byType(type);
+  expect(nodes.length, `expected at least one ${type} node`).toBeGreaterThan(0);
+  for (const node of nodes) {
+    const connected = api.edges.some(
+      (edge) =>
+        (edge.from === node.id || edge.to === node.id) &&
+        [edge.from, edge.to].some(
+          (id) => id !== node.id && (id.startsWith("sessions/") || id.startsWith("lectures/")),
+        ),
+    );
+    expect(connected, `${node.id} has no related session or lecture`).toBe(true);
+  }
+};
+
 describe("assessment connections", () => {
   it("every assessment has an edge into a session or a lecture", () => {
-    const assessments = byType("assessments");
-    expect(assessments.length, "expected at least one assessment").toBeGreaterThan(0);
-    for (const assessment of assessments) {
-      const connected = api.edges.some(
-        (edge) =>
-          (edge.from === assessment.id || edge.to === assessment.id) &&
-          [edge.from, edge.to].some(
-            (id) => id !== assessment.id && (id.startsWith("sessions/") || id.startsWith("lectures/")),
-          ),
-      );
-      expect(connected, `${assessment.id} has no related session or lecture`).toBe(true);
-    }
+    expectEveryNodeConnectedToTeaching("assessments");
+  });
+});
+
+describe("lab connections", () => {
+  it("every lab has an edge into a session or a lecture", () => {
+    expectEveryNodeConnectedToTeaching("labs");
   });
 });
 

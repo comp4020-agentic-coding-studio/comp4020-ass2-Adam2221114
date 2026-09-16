@@ -15,16 +15,16 @@ import { sessionLabels, siteConfig } from "../site-config";
   heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
   {...siteConfig}
 >
+  <div class="course-question-wrap">
+    <Callout type="info">
+      <p class="course-question-eyebrow">The question this course keeps returning to</p>
+      <h2 class="course-question">What makes an apology actually work?</h2>
+    </Callout>
+  </div>
+
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
-
-  <div class="course-question-wrap">
-    <Callout type="info">
-      <h2>The question this course keeps returning to</h2>
-      <p class="course-question">What makes an apology actually work?</p>
-    </Callout>
-  </div>
 
   <h2>What you will do</h2>
   <p>
@@ -77,21 +77,36 @@ import { sessionLabels, siteConfig } from "../site-config";
     font-size: 0.9rem;
   }
 
+  .course-question-eyebrow {
+    margin-block: 0 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--at-primary);
+  }
+
   .course-question {
     margin-block: 0;
-    font-size: clamp(1.35rem, 1.05rem + 1.2vw, 1.85rem);
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.25;
   }
 
   /* The central course question is the one idea meant to stay visible all
      semester (CLAUDE.md, Phase 1) — the generic "info" callout otherwise
      renders in a neutral warm-grey tint indistinguishable from an ordinary
-     aside. Re-tint it with the brand gold instead of introducing a new
-     callout variant. */
+     aside, and sits below the fold of "what you will do". Re-tint it with
+     the brand gold, give it more room than a passing aside, and put it
+     first so it reads as the course's spine rather than a footnote. */
+  .course-question-wrap {
+    margin-block-end: 2rem;
+  }
+
   .course-question-wrap :global(.at-callout) {
     --at-accent: var(--at-primary);
     --at-accent-soft: color-mix(in oklab, var(--at-primary) 12%, var(--at-bg));
+    padding: 1.75rem 2rem;
     border-block-start-width: 3px;
   }
 </style>

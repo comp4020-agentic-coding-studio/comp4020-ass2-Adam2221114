@@ -20,8 +20,23 @@ const title = `Week ${lecture.data.week}: ${lecture.data.title}`;
 
 <ContentLayout title={title} description={lecture.data.description} {...siteConfig}>
   <p><strong>{formatCourseDate(lecture.data.date)}</strong></p>
-  {lecture.data.slides && <p><a href={withBase(lecture.data.slides)}>Open the slides</a></p>}
+  {
+    lecture.data.slides ? (
+      <p>
+        <a href={withBase(lecture.data.slides)}>Open the slides</a>
+      </p>
+    ) : (
+      <p class="slides-pending">Slides: pending upload</p>
+    )
+  }
   <Content />
   <TeachingTeam teachers={lecture.data.teachers} />
   <RelatedContent entry={lecture} collections={graphCollections} />
 </ContentLayout>
+
+<style>
+  .slides-pending {
+    color: var(--at-text-secondary);
+    font-style: italic;
+  }
+</style>

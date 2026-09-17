@@ -1,0 +1,110 @@
+---
+import { MOVEMENTS } from "../lib/movements";
+
+function weekLabel(weeks: readonly number[]): string {
+  return weeks.length > 1 ? `Weeks ${weeks[0]}–${weeks[weeks.length - 1]}` : `Week ${weeks[0]}`;
+}
+---
+
+<div class="movement-timeline">
+  <div class="movement-rule" aria-hidden="true"></div>
+  <ol class="movement-row">
+    {
+      MOVEMENTS.map((movement) => (
+        <li class="movement-card">
+          <span class="movement-badge">{movement.letter}</span>
+          <p class="movement-weeks">{weekLabel(movement.weeks)}</p>
+          <p class="movement-title">{movement.title}</p>
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<style>
+  .movement-timeline {
+    margin-block: 1.5rem 0.5rem;
+  }
+
+  .movement-rule {
+    height: 3px;
+    margin-block-end: 1.5rem;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--at-primary) 0 10px,
+      transparent 10px 16px
+    );
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.7s ease;
+  }
+
+  /* Visible by default (and always under reduced motion, since JS never
+     adds `js-reveal` in that case) — only pulled back to 0 once JS is
+     confirmed running, then grown back in when the section scrolls into
+     view. See index.astro's shared reveal script. */
+  :global(html.js-reveal .reveal) .movement-rule {
+    transform: scaleX(0);
+  }
+
+  :global(html.js-reveal .reveal.is-visible) .movement-rule {
+    transform: scaleX(1);
+  }
+
+  .movement-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .movement-card {
+    flex: 1 1 11rem;
+    min-width: 11rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--at-border);
+    border-radius: 0.75rem;
+    background: var(--at-bg-alt);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .movement-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--at-primary);
+    box-shadow: var(--at-shadow-sm);
+  }
+
+  .movement-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-block-end: 0.6rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--at-primary);
+    color: var(--at-on-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .movement-weeks {
+    margin-block: 0 0.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--at-text-secondary);
+  }
+
+  .movement-title {
+    margin-block: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+</style>

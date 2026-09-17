@@ -1,0 +1,129 @@
+---
+import HomeIcons from "./HomeIcons.astro";
+
+const nonApology = [
+  "I'm sorry if anyone was upset by what happened.",
+  "That's not really how I remember it going, though.",
+  "Anyway, let's just put this behind us.",
+];
+
+const apology = [
+  "I missed the deadline and didn't tell you until it was too late.",
+  "That's on me — I should have flagged it a week earlier.",
+  "Here's what I'm changing so it doesn't happen again.",
+];
+---
+
+<div class="responses">
+  <HomeIcons name="crack" class="responses-icon" />
+
+  <div class="responses-grid">
+    <div class="response-card response-card--bad">
+      <p class="response-label">Same mistake, hedged</p>
+      <ul class="response-lines">
+        {
+          nonApology.map((line) => (
+            <li>
+              <HomeIcons name="speaker" class="response-avatar" />
+              <span>{line}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="response-card response-card--good">
+      <p class="response-label">Same mistake, owned</p>
+      <ul class="response-lines">
+        {
+          apology.map((line) => (
+            <li>
+              <HomeIcons name="speaker" class="response-avatar" />
+              <span>{line}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* HomeIcons.astro is a separate component — :global() is required to
+     reach its rendered <svg>, otherwise these rules silently no-op. */
+  :global(.responses-icon) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-block-end: 1.25rem;
+    color: var(--at-text-secondary);
+  }
+
+  .responses-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (width < 640px) {
+    .responses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .response-card {
+    padding: 1.5rem 1.6rem;
+    border-radius: 1rem;
+  }
+
+  .response-card--bad {
+    border: 1.5px dashed var(--at-border);
+    background: var(--at-bg-alt);
+  }
+
+  .response-card--good {
+    border: 1.5px solid var(--at-primary);
+    background: color-mix(in oklab, var(--at-primary) 8%, var(--at-bg));
+  }
+
+  .response-label {
+    margin-block: 0 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--at-text-secondary);
+  }
+
+  .response-card--good .response-label {
+    color: var(--at-primary);
+  }
+
+  .response-lines {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .response-lines li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  :global(.response-avatar) {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-block-start: 0.15rem;
+    color: var(--at-text-secondary);
+  }
+
+  .response-card--bad .response-lines li {
+    font-style: italic;
+    color: var(--at-text-secondary);
+  }
+</style>

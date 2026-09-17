@@ -1,0 +1,87 @@
+---
+/** A labelled set of parts (or steps) from a lecture's own enumerated
+ *  list, rendered as hexagon-badge cards in the site's two-ink style
+ *  instead of a plain bullet list. Used for both parallel categories
+ *  (e.g. Week 1's four apology-adjacent categories) and ordered chains
+ *  (e.g. Week 10's repair sequence) — the numbered badge communicates
+ *  order where it matters and reads as a plain label where it doesn't. */
+interface Item {
+  title: string;
+  body: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<ol class="concept-grid">
+  {
+    items.map((item, index) => (
+      <li class="concept-card">
+        <span class={`concept-badge concept-badge--${index % 2 === 0 ? "gold" : "ink"}`} aria-hidden="true">
+          {index + 1}
+        </span>
+        <p class="concept-title">{item.title}</p>
+        <p class="concept-body">{item.body}</p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .concept-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none;
+  }
+
+  .concept-card {
+    flex: 1 1 12rem;
+    min-width: 12rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--at-border);
+    border-radius: 0.75rem;
+    background: var(--at-bg-alt);
+  }
+
+  .concept-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-block-end: 0.6rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .concept-badge--gold {
+    background: var(--at-primary);
+    color: var(--at-on-primary);
+  }
+
+  .concept-badge--ink {
+    background: var(--at-text);
+    color: var(--at-bg);
+  }
+
+  .concept-title {
+    margin-block: 0 0.3rem;
+    font-weight: 700;
+    color: var(--at-heading);
+  }
+
+  .concept-body {
+    margin-block: 0;
+    color: var(--at-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>

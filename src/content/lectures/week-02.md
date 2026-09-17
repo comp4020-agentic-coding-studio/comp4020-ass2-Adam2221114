@@ -9,7 +9,6 @@ date: 2027-03-01
 teachers:
   - idris-fenn
 related:
-  - sessions/02-marking-up-an-apology
   - lectures/week-01
 ---
 
@@ -50,6 +49,23 @@ the fourth, and readers reliably notice which one is missing even when they
 can't name it. That's the diagnostic value of the split: it turns "that
 didn't feel like a real apology" into "which component was missing," a
 question with an answer.
+
+## A component that's granted and then taken back
+
+A harder case than a missing component: one that's present and then
+quietly withdrawn by a later clause in the same statement. Take a
+variant of the breach notice: "We take full responsibility for this
+incident, though we want to be clear the vulnerability was disclosed to
+us less than 24 hours before it was exploited." The first clause is a
+real acceptance of responsibility. The second doesn't contradict it
+outright — it's phrased as context — but its actual function is to
+pre-argue a defence for the company before anyone has asked for one,
+which is Week 1's justification move, smuggled in after the
+responsibility clause has already done its job of sounding accountable.
+Marking this up as "responsibility: present" would miss what the
+sentence is actually doing; the components aren't just checked off
+individually, they have to be checked against what the rest of the
+statement does to them.
 
 None of this ranks the four against each other yet — that's next week's
 question, once the anatomy is on the table.

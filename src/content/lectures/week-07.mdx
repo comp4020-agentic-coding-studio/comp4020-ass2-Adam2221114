@@ -8,9 +8,10 @@ date: 2027-04-05
 teachers:
   - marisol-quaye
 related:
-  - sessions/07-same-words-different-delivery
   - lectures/week-06
 ---
+
+import QuadrantMatrix from "../../components/diagrams/QuadrantMatrix.astro";
 
 Same sentence, two different moments:
 
@@ -57,6 +58,33 @@ entirely. "Written apologies are more considered" is only true when the
 extra time was actually spent thinking; "face to face is more sincere" is
 only true when the immediacy signals something real and not a rehearsed
 line delivered on cue.
+
+## The two variables crossed
+
+Timing and medium don't just add separately — crossing them gives four
+distinct trades, not two:
+
+<QuadrantMatrix
+  axisRow="Timing"
+  axisCol="Medium"
+  rowLabels={["Immediate", "Delayed"]}
+  colLabels={["Face to face", "By text"]}
+  cells={[
+    [
+      "Real-time follow-up, but no time to have learned anything new and no chance to reread the wording after.",
+      "Rereadable right away, but the speed itself can read as ending the fight rather than understanding it.",
+    ],
+    [
+      "Follow-up and delivery are both available, but only once distance has already opened between the moment and the reply.",
+      "Rereadable and unhurried, but whether the delay bought understanding or just produced avoidance isn't visible in the words.",
+    ],
+  ]}
+/>
+
+No cell in this grid is the safe choice — each combination trades away
+something the other three keep, which is the same point Week 5's
+functions made about a single apology: satisfying one column doesn't
+say anything about whether the row was handled well.
 
 Week 6 showed that audience is one variable that can change what
 identical wording means. Timing and medium are two more — not packaging

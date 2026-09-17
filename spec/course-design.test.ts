@@ -57,11 +57,10 @@ describe("banned phrases", () => {
   ];
 
   // Derived live from dist/api/index.json at test-run time, not a hardcoded
-  // id list, so this set grows to cover every session, lecture and
-  // assessment as they're authored, not just the placeholders that exist
-  // today.
+  // id list, so this set grows to cover every lecture and assessment as
+  // they're authored, not just the placeholders that exist today.
   const taughtContent = api.nodes.filter((node) =>
-    ["sessions", "lectures", "assessments", "labs"].includes(node.type),
+    ["lectures", "assessments", "labs"].includes(node.type),
   );
 
   it("has at least one node to check", () => {
@@ -79,10 +78,6 @@ describe("banned phrases", () => {
 });
 
 describe("twelve teaching weeks", () => {
-  it("has exactly twelve dated sessions, one per week", () => {
-    expectTwelveDistinctWeeks("sessions");
-  });
-
   it("has exactly twelve dated lectures, one per week", () => {
     expectTwelveDistinctWeeks("lectures");
   });
@@ -116,22 +111,20 @@ const expectEveryNodeConnectedToTeaching = (type: string) => {
     const connected = api.edges.some(
       (edge) =>
         (edge.from === node.id || edge.to === node.id) &&
-        [edge.from, edge.to].some(
-          (id) => id !== node.id && (id.startsWith("sessions/") || id.startsWith("lectures/")),
-        ),
+        [edge.from, edge.to].some((id) => id !== node.id && id.startsWith("lectures/")),
     );
-    expect(connected, `${node.id} has no related session or lecture`).toBe(true);
+    expect(connected, `${node.id} has no related lecture`).toBe(true);
   }
 };
 
 describe("assessment connections", () => {
-  it("every assessment has an edge into a session or a lecture", () => {
+  it("every assessment has an edge into a lecture", () => {
     expectEveryNodeConnectedToTeaching("assessments");
   });
 });
 
 describe("lab connections", () => {
-  it("every lab has an edge into a session or a lecture", () => {
+  it("every lab has an edge into a lecture", () => {
     expectEveryNodeConnectedToTeaching("labs");
   });
 });

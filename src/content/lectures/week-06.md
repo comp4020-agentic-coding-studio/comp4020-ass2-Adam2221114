@@ -8,7 +8,6 @@ date: 2027-03-29
 teachers:
   - idris-fenn
 related:
-  - sessions/06-who-is-this-apology-actually-for
   - lectures/week-05
 ---
 
@@ -56,6 +55,22 @@ built to register as an accountability signal for observers while
 carrying almost no specific content for the one person who already knows
 what was said and needed something else entirely — one sentence, two
 jobs, aimed at two different listeners.
+
+## When vagueness stops protecting anyone
+
+The privacy reading only holds if the vagueness is actually buying the
+harmed party something. A harder case: the same public statement,
+released after it becomes known that the company also stayed vague in
+its private message to the harmed party — who therefore learned the
+specifics of what was done to them from a leaked internal document, not
+from the company. Once that's known, "some found hurtful" no longer
+reads as privacy protection, because the person it would have protected
+was never given the specific version either. The test isn't whether the
+public statement is vague; it's whether the specificity the harmed party
+needed was actually delivered somewhere, privately, at all. Vagueness
+that's uniform across every audience, including the one person entitled
+to the full account, isn't protecting that person from anything — it's
+just withholding, dressed the same way privacy protection would be.
 
 This doesn't resolve the tension between the two audiences, only names
 it. Week 7 asks whether timing and medium can shift which audience's

@@ -1,0 +1,168 @@
+---
+/** The first of the two large "editorial" illustrations (home page only):
+ *  a nested-hexagon diagram of the four components from the Week 2-3
+ *  component model, read from the centre outward. Purely decorative — the
+ *  actual content is the real HTML legend beside it, so nothing meaningful
+ *  lives inside the SVG's `aria-hidden` markup. */
+const rings = [
+  {
+    points: "248.1,188.0 248.1,232.0 210.0,254.0 171.9,232.0 171.9,188.0 210.0,166.0",
+    tone: "gold",
+  },
+  {
+    points: "284.5,167.0 284.5,253.0 210.0,296.0 135.5,253.0 135.5,167.0 210.0,124.0",
+    tone: "ink",
+  },
+  {
+    points: "320.9,146.0 320.9,274.0 210.0,338.0 99.1,274.0 99.1,146.0 210.0,82.0",
+    tone: "gold",
+  },
+  {
+    points: "357.2,125.0 357.2,295.0 210.0,380.0 62.8,295.0 62.8,125.0 210.0,40.0",
+    tone: "ink",
+  },
+] as const;
+
+const legend = [
+  {
+    tone: "gold",
+    title: "Acknowledgment of harm",
+    body: "Naming specifically what happened and who it affected — not “mistakes were made,” but what was actually done.",
+  },
+  {
+    tone: "ink",
+    title: "Acceptance of responsibility",
+    body: "Owning the action without deflecting it onto intent, circumstance, or the person it landed on.",
+  },
+  {
+    tone: "gold",
+    title: "Expression of regret",
+    body: "The part that reads as feeling something about the harm, rather than only reporting on it.",
+  },
+  {
+    tone: "ink",
+    title: "Commitment to repair",
+    body: "A concrete, checkable change — the piece that turns the apology into something other than words.",
+  },
+] as const;
+---
+
+<div class="anatomy">
+  <svg
+    class="anatomy-svg"
+    viewBox="0 0 420 420"
+    role="img"
+    aria-hidden="true"
+    focusable="false"
+  >
+    {
+      // Drawn outermost-first so each smaller hexagon paints over the
+      // previous one, leaving only its own ring visible.
+      [...rings].reverse().map((ring) => (
+        <polygon points={ring.points} class={`ring ring--${ring.tone}`} />
+      ))
+    }
+  </svg>
+
+  <ol class="anatomy-legend">
+    {
+      legend.map((item, index) => (
+        <li class="anatomy-item">
+          <span class={`anatomy-badge anatomy-badge--${item.tone}`} aria-hidden="true">
+            {index + 1}
+          </span>
+          <div>
+            <p class="anatomy-item-title">{item.title}</p>
+            <p class="anatomy-item-body">{item.body}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<style>
+  .anatomy {
+    display: grid;
+    grid-template-columns: minmax(0, 20rem) 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (width < 640px) {
+    .anatomy {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .anatomy-svg {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    max-width: 20rem;
+  }
+
+  .ring {
+    stroke: var(--at-bg);
+    stroke-width: 4;
+    stroke-linejoin: round;
+  }
+
+  .ring--gold {
+    fill: var(--at-primary);
+  }
+
+  .ring--ink {
+    fill: var(--at-text);
+  }
+
+  .anatomy-legend {
+    display: grid;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .anatomy-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.9rem;
+    align-items: start;
+  }
+
+  .anatomy-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-block-start: 0.1rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .anatomy-badge--gold {
+    background: var(--at-primary);
+    color: var(--at-on-primary);
+  }
+
+  .anatomy-badge--ink {
+    background: var(--at-text);
+    color: var(--at-bg);
+  }
+
+  .anatomy-item-title {
+    margin-block: 0 0.3rem;
+    font-weight: 700;
+    color: var(--at-heading);
+  }
+
+  .anatomy-item-body {
+    margin-block: 0;
+    color: var(--at-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>

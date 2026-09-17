@@ -8,9 +8,10 @@ date: 2027-03-22
 teachers:
   - marisol-quaye
 related:
-  - sessions/05-what-is-this-apology-actually-doing
   - lectures/week-04
 ---
+
+import ConceptGrid from "../../components/diagrams/ConceptGrid.astro";
 
 Start with a limit: nothing here claims to know what anyone privately
 felt when they apologised. "They didn't really mean it" isn't a claim
@@ -45,6 +46,27 @@ it.
 - **Closure-seeking** — end the discomfort of the situation, for the
   speaker, regardless of whether the harmed party is satisfied.
 
+<ConceptGrid
+  items={[
+    {
+      title: "Relational repair",
+      body: "Restores the relationship on the harmed party’s terms.",
+    },
+    {
+      title: "Self-protection",
+      body: "Limits damage to the speaker’s own standing.",
+    },
+    {
+      title: "Reputation management",
+      body: "Controls how the speaker is perceived by people who weren’t harmed.",
+    },
+    {
+      title: "Closure-seeking",
+      body: "Ends the speaker’s discomfort, regardless of whether the harmed party is satisfied.",
+    },
+  ]}
+/>
+
 These aren't mutually exclusive, and none of them is the same axis as
 "was this a real apology" from Weeks 1–4. An apology can be
 component-complete in Week 2's sense and still be primarily doing
@@ -68,6 +90,25 @@ acknowledged as the speaker's doing. It can still succeed at
 closure-seeking: the sentence ends the exchange, for the speaker, whether
 or not the other person is satisfied. Failing on one function doesn't
 mean failing on all of them.
+
+## When the wording predicts two functions at once
+
+The test isn't always decisive. A manager who mishandled a promotion
+decision writes a private note that is specific, names the exact
+process failure, and offers to redo the process properly — wording that
+predicts relational repair. It's also wording that predicts
+self-protection: specific, procedural language is exactly what a careful
+person would write if they were mainly managing their own exposure to a
+formal complaint. Both predictions are satisfied by the same sentence,
+and nothing in the wording alone breaks the tie.
+
+What can break it is what happens next, which isn't part of the
+utterance but is still checkable: does the offered redo actually happen,
+on a timeline that doesn't wait for a complaint to force it? A function
+can be underdetermined by the wording at the moment it's spoken and
+still become determinable once there's a next action to check it
+against — the test doesn't fail here, it just needs more evidence than
+one sentence provides.
 
 All of this has assumed one listener. Once there's an audience — people
 who weren't harmed but are watching — a single sentence can pursue

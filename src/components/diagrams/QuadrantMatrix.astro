@@ -1,0 +1,76 @@
+---
+/** A real 2x2 comparison where a lecture's own text crosses two
+ *  independent binary dimensions (e.g. Week 7's timing x medium). Built
+ *  as a semantic <table> rather than a drawn grid — it already gets the
+ *  theme's table styling (header background, row striping, dark-mode
+ *  tokens) for free, and a table is the correct accessible structure for
+ *  actual tabular content rather than an icon-style illustration. */
+interface Props {
+  axisRow: string;
+  axisCol: string;
+  rowLabels: [string, string];
+  colLabels: [string, string];
+  cells: [[string, string], [string, string]];
+}
+
+const { axisRow, axisCol, rowLabels, colLabels, cells } = Astro.props;
+---
+
+<table class="quadrant-matrix">
+  <caption>
+    {axisRow} <span aria-hidden="true">×</span> {axisCol}
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col"><span class="sr-only">{axisRow}</span></th>
+      <th scope="col">{colLabels[0]}</th>
+      <th scope="col">{colLabels[1]}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{rowLabels[0]}</th>
+      <td>{cells[0][0]}</td>
+      <td>{cells[0][1]}</td>
+    </tr>
+    <tr>
+      <th scope="row">{rowLabels[1]}</th>
+      <td>{cells[1][0]}</td>
+      <td>{cells[1][1]}</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  .quadrant-matrix caption {
+    caption-side: top;
+    text-align: start;
+    margin-block-end: 0.5rem;
+    font-size: var(--at-font-size-sm, 0.85rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--at-text-secondary);
+  }
+
+  .quadrant-matrix th {
+    color: var(--at-heading);
+  }
+
+  .quadrant-matrix td {
+    color: var(--at-text-secondary);
+    line-height: 1.5;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

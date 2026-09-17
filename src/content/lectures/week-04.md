@@ -8,7 +8,6 @@ date: 2027-03-15
 teachers:
   - idris-fenn
 related:
-  - sessions/04-repairing-one-broken-function
   - lectures/week-03
 ---
 
@@ -64,6 +63,22 @@ that way" as interchangeable entries on a list of bad phrases would be
 accurate about the symptom and wrong about the cause, which is exactly
 Week 3's point applied to failure instead of success: what's broken
 depends on the case.
+
+## When nothing is broken because nothing was said
+
+A fifth case doesn't fit the pattern of the first four, because there's
+no single word or clause to ablate: "I hear that this affected you, and
+I've been thinking about it." Nothing here is conditional, no agent is
+deleted, and the object of the sentence hasn't been redirected onto the
+listener's feelings — it passes every check the first four statements
+failed. It still isn't an apology, because acknowledgment of harm and
+acceptance of responsibility were never attempted in the first place;
+"I've been thinking about it" describes an internal process without
+committing to a single claim about what happened or whose fault it was.
+The ablation test finds broken pieces by removing words and checking
+what changes. This sentence shows the test has a blind spot: it can't
+locate a missing component by removing anything, because there was
+nothing there to remove.
 
 None of this asks whether any of these four people meant to produce a
 non-apology, or drifted into one out of habit. Whether that distinction

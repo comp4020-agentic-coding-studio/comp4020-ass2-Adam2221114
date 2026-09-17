@@ -8,7 +8,6 @@ date: 2027-04-12
 teachers:
   - idris-fenn
 related:
-  - sessions/08-same-mistake-different-rank
   - lectures/week-07
 ---
 
@@ -63,6 +62,21 @@ power changes is the conditions around the apology: who can afford delay,
 who controls the channel, whose mistake gets treated as requiring
 smoothing over versus absorbed as ordinary friction. It doesn't mechanically
 decide who apologises and who doesn't.
+
+## When rank and leverage point different ways
+
+Rank is a proxy for who can afford to let harm sit, not the thing itself.
+A specialist contractor whose departure would stall a launch can miss a
+deadline, apologise slowly and casually, and face no real consequence,
+despite having no formal authority over anyone on the team — the
+company's dependence on their specific skills does the same protective
+work rank does for the senior colleague above. Meanwhile a senior manager
+whose position is publicly shaky after a bad quarter may apologise
+fast and personally for a comparable mistake, because their formal rank
+no longer buys them the safety it would in a stable position. What
+predicts the speed and specificity of an apology isn't the title on
+either person's contract; it's who actually stands to lose more from the
+relationship souring — which rank usually tracks, but not always.
 
 Today's question was who's obligated to apologise. Week 9 flips the lens:
 who has the power to decide whether an apology, once given, actually

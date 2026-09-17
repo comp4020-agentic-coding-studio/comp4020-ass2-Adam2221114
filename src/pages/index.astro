@@ -1,11 +1,32 @@
 ---
+import { Image } from "astro:assets";
 import Callout from "astro-theme-university/components/Callout.astro";
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import { withBase } from "astro-theme-university/url";
+import ApologyAnatomy from "../components/ApologyAnatomy.astro";
+import HomeIcons from "../components/HomeIcons.astro";
+import MovementTimeline from "../components/MovementTimeline.astro";
+import TwoResponses from "../components/TwoResponses.astro";
 import heroImage from "../assets/images/hero-home.avif";
+import idrisPhoto from "../content/people/idris-fenn.avif";
+import marisolPhoto from "../content/people/marisol-quaye.avif";
 import { courseMeta } from "../course-config";
-import { sessionLabels, siteConfig } from "../site-config";
+import { MOVEMENTS } from "../lib/movements";
+import { siteConfig } from "../site-config";
+
+const stats = [
+  { value: "12", label: "teaching weeks" },
+  { value: "3", label: "assessments" },
+  { value: "10", label: "labs" },
+  { value: `${MOVEMENTS.length}`, label: "movements" },
+] as const;
+
+const team = [
+  { name: "Marisol Quaye", role: "Convenor", photo: marisolPhoto },
+  { name: "Idris Fenn", role: "Tutor", photo: idrisPhoto },
+] as const;
 ---
 
 <ContentLayout
@@ -26,15 +47,32 @@ import { sessionLabels, siteConfig } from "../site-config";
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
+  <div class="stat-strip reveal">
+    {
+      stats.map((stat) => (
+        <div class="stat-tile">
+          <p class="stat-value">{stat.value}</p>
+          <p class="stat-label">{stat.label}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
   <h2>What you will do</h2>
   <p>
     Every week you take a real apology — public or personal, someone else's
     or your own — and put it through the same four-stage cycle. It isn't a
     formula to memorise; it's the shape of the thinking every assignment in
-    this course asks for.
+    this course asks for. What changes week to week isn't the cycle itself
+    but the complication layered on top of it: whose apology it is, who's
+    watching, who holds the power, and what's actually owed once "sorry" has
+    been said.
   </p>
-  <div class="info-card-grid">
+  <div class="info-card-grid reveal">
     <div class="info-card">
+      <HomeIcons name="magnifier" class="info-card-icon" />
       <p class="info-card-eyebrow">Stage 01</p>
       <h3 class="info-card-title">Read the situation</h3>
       <p class="info-card-body">
@@ -44,6 +82,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="blocks" class="info-card-icon" />
       <p class="info-card-eyebrow">Stage 02</p>
       <h3 class="info-card-title">Build the apology</h3>
       <p class="info-card-body">
@@ -53,6 +92,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="gauge" class="info-card-icon" />
       <p class="info-card-eyebrow">Stage 03</p>
       <h3 class="info-card-title">Stress-test it</h3>
       <p class="info-card-body">
@@ -62,6 +102,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="loop" class="info-card-icon" />
       <p class="info-card-eyebrow">Stage 04</p>
       <h3 class="info-card-title">Revise and deliver</h3>
       <p class="info-card-body">
@@ -72,6 +113,35 @@ import { sessionLabels, siteConfig } from "../site-config";
     </div>
   </div>
 
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <h2>The anatomy of an apology</h2>
+  <p>
+    Weeks 2 and 3 take the four-stage cycle apart and look at what "build
+    the apology" is actually made of. These four components nest inside
+    each other rather than sitting in a list — pull one out and the
+    others still stand, but the apology reads differently, which is
+    exactly the ablation test Week 3 runs on real examples.
+  </p>
+  <div class="illustration-frame reveal">
+    <ApologyAnatomy />
+  </div>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <h2>How the semester unfolds</h2>
+  <p>
+    The course doesn't front-load a formula and spend twelve weeks applying
+    it. Each movement complicates the central question again — first what
+    an apology is, then what it's made of, then why it fails, then how
+    context, power, and aftermath change everything that came before.
+  </p>
+  <div class="reveal">
+    <MovementTimeline />
+  </div>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
   <h2>Who it is for</h2>
   <p>
     This isn't only for people who want to get better at apologising
@@ -79,8 +149,9 @@ import { sessionLabels, siteConfig } from "../site-config";
     responding to apologies as part of what they do. If one of these
     sounds like you, the material has somewhere to land.
   </p>
-  <div class="info-card-grid">
+  <div class="info-card-grid reveal">
     <div class="info-card">
+      <HomeIcons name="pen" class="info-card-icon" />
       <p class="info-card-eyebrow">For writers &amp; communicators</p>
       <h3 class="info-card-title">Communicators</h3>
       <p class="info-card-body">
@@ -90,6 +161,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="hexagon" class="info-card-icon" />
       <p class="info-card-eyebrow">For product &amp; service people</p>
       <h3 class="info-card-title">Designers and builders</h3>
       <p class="info-card-body">
@@ -100,6 +172,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="people" class="info-card-icon" />
       <p class="info-card-eyebrow">For team members &amp; leads</p>
       <h3 class="info-card-title">Team members and leaders</h3>
       <p class="info-card-body">
@@ -109,6 +182,7 @@ import { sessionLabels, siteConfig } from "../site-config";
       </p>
     </div>
     <div class="info-card">
+      <HomeIcons name="spark" class="info-card-icon" />
       <p class="info-card-eyebrow">For the curious</p>
       <h3 class="info-card-title">Curious skeptics</h3>
       <p class="info-card-body">
@@ -119,19 +193,81 @@ import { sessionLabels, siteConfig } from "../site-config";
     </div>
   </div>
 
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <h2>Same mistake, two responses</h2>
+  <p>
+    The difference between these isn't tone — it's structure. The left
+    column is what Week 4 spends a whole session pulling apart: hedged
+    acknowledgment, no ownership, no repair. The right column is why
+    Weeks 2 and 3's four components hold up under the same pressure.
+  </p>
+  <div class="illustration-frame reveal">
+    <TwoResponses />
+  </div>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <div class="team-strip reveal">
+    <h2 class="team-heading">Course team</h2>
+    <ul class="team-list">
+      {
+        team.map((person) => (
+          <li class="team-person">
+            <Image src={person.photo} alt="" width={112} class="team-photo" />
+            <span>
+              <span class="team-name">{person.name}</span>
+              <span class="team-role">{person.role}</span>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <a class="team-link" href={withBase("/people/")}>Full bios and contact details →</a>
+  </div>
+
   <h2>Where to go next</h2>
-  <CardGrid columns={2}>
-    <Card title={sessionLabels.plural} href="/sessions/">
-      <p>The weekly schedule and what happens in each teaching session.</p>
+  <CardGrid columns={3}>
+    <Card title="Lectures" href="/lectures/">
+      <HomeIcons name="book" class="nav-card-icon" />
+      <p>The weekly ideas the course builds from, one movement at a time.</p>
+    </Card>
+    <Card title="Labs" href="/labs/">
+      <HomeIcons name="flask" class="nav-card-icon" />
+      <p>Hands-on exercises where the week's ideas get tried on real cases.</p>
     </Card>
     <Card title="Assessment" href="/assessments/">
+      <HomeIcons name="clipboard" class="nav-card-icon" />
       <p>What is marked, what it is worth, and when it is due.</p>
     </Card>
     <Card title="People" href="/people/">
+      <HomeIcons name="people" class="nav-card-icon" />
       <p>Who teaches the course and how to reach them.</p>
     </Card>
   </CardGrid>
 </ContentLayout>
+
+<script>
+  const prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReducedMotion) {
+    document.documentElement.classList.add("js-reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.15 },
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  }
+</script>
 
 <style>
   .course-tags {
@@ -184,6 +320,47 @@ import { sessionLabels, siteConfig } from "../site-config";
     border-block-start-width: 3px;
   }
 
+  /* Static dotted-stripe motif echoing the hero art — a fixed divider, not
+     an animated shimmer, between major sections. */
+  .section-divider {
+    height: 3px;
+    margin-block: 2.5rem;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--at-divider) 0 14px,
+      transparent 14px 22px
+    );
+  }
+
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+    gap: 1rem;
+    margin-block: 0.5rem 1rem;
+  }
+
+  .stat-tile {
+    padding: 1.1rem 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    background: var(--at-bg-alt);
+  }
+
+  .stat-value {
+    margin-block: 0 0.15rem;
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--at-primary);
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .stat-label {
+    margin-block: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: var(--at-text-secondary);
+  }
+
   .info-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
@@ -200,6 +377,26 @@ import { sessionLabels, siteConfig } from "../site-config";
       color-mix(in oklab, var(--at-primary) 4%, var(--at-bg)) 0%,
       color-mix(in oklab, var(--at-primary) 10%, var(--at-bg)) 100%
     );
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--at-shadow-sm);
+  }
+
+  /* HomeIcons.astro is a separate component, so its rendered <svg> doesn't
+     carry this file's scope attribute — :global() is required to reach it,
+     same as the .at-card/.at-callout overrides below. Without it these
+     rules silently no-op and the icon falls back to raw intrinsic SVG
+     size (huge) and inherited text colour (dark ink, not gold). */
+  :global(.info-card-icon) {
+    width: 1.9rem;
+    height: 1.9rem;
+    margin-block-end: 0.75rem;
+    color: var(--at-primary);
   }
 
   .info-card-eyebrow {
@@ -223,5 +420,108 @@ import { sessionLabels, siteConfig } from "../site-config";
     color: var(--at-text-secondary);
     font-size: 0.95rem;
     line-height: 1.55;
+  }
+
+  .illustration-frame {
+    padding: 2rem;
+    margin-block: 1.25rem 1.5rem;
+    border: 1px solid var(--at-border);
+    border-radius: 1.25rem;
+    background: var(--at-bg-alt);
+  }
+
+  :global(.nav-card-icon) {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-block-end: 0.5rem;
+    color: var(--at-primary);
+  }
+
+  /* Reach into the theme's own card component for a slightly more
+     tasteful hover than its default (background tint + shadow only) —
+     following the same :global() escape hatch already used above for
+     .at-callout, since .at-card is rendered by a different component. */
+  :global(.at-card) {
+    transition:
+      transform 0.15s ease,
+      background-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  :global(a.at-card:hover) {
+    transform: translateY(-3px);
+  }
+
+  .team-strip {
+    padding: 1.5rem 1.75rem;
+    margin-block: 1.25rem 2rem;
+    border: 1px solid var(--at-border);
+    border-radius: 1rem;
+    background: var(--at-bg-alt);
+  }
+
+  .team-heading {
+    margin-block: 0 1rem;
+    font-size: 1.05rem;
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .team-person {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .team-photo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+
+  .team-person span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-name {
+    font-weight: 700;
+  }
+
+  .team-role {
+    font-size: 0.85rem;
+    color: var(--at-text-secondary);
+  }
+
+  .team-link {
+    font-size: 0.9rem;
+  }
+
+  /* Shared one-time scroll-reveal. Visible by default (and always under
+     reduced motion, since the script above never adds `js-reveal` there)
+     — JS only opts elements into a hidden starting state once it has
+     confirmed it's running, so nothing depends on JS to be seen. */
+  .reveal {
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  :global(html.js-reveal) .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  :global(html.js-reveal) .reveal.is-visible {
+    opacity: 1;
+    transform: none;
   }
 </style>

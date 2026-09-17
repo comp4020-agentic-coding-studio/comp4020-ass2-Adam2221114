@@ -9,9 +9,10 @@ date: 2027-04-26
 teachers:
   - idris-fenn
 related:
-  - sessions/10-what-would-actually-fix-this
   - lectures/week-09
 ---
+
+import ConceptGrid from "../../components/diagrams/ConceptGrid.astro";
 
 A courier company loses a customer's package. Support responds well by
 every standard this course has built: they name exactly what happened, no
@@ -44,6 +45,35 @@ the other happened.
   supposed to add up to, and the only one of the six that a second
   incident can directly falsify.
 
+<ConceptGrid
+  items={[
+    {
+      title: "Apology as an utterance",
+      body: "The speech act itself — everything Weeks 1–9 studied: components, function, audience, timing.",
+    },
+    {
+      title: "Acknowledgment",
+      body: "An external admission that harm occurred, with or without a well-formed apology attached.",
+    },
+    {
+      title: "Restitution",
+      body: "Compensation for what was actually lost — the refund, the replaced item, the corrected record.",
+    },
+    {
+      title: "Behaviour change",
+      body: "The responsible person or organisation personally does something differently going forward.",
+    },
+    {
+      title: "Structural repair",
+      body: "The conditions that produced the harm are altered — a process changed, a policy rewritten.",
+    },
+    {
+      title: "Prevention of recurrence",
+      body: "The outcome the other five are supposed to add up to — the only one a second incident can directly falsify.",
+    },
+  ]}
+/>
+
 The courier case had a good utterance and real restitution. It had no
 structural repair, because nothing about how packages were handled at
 that depot was ever examined. Prevention of recurrence therefore never
@@ -61,6 +91,21 @@ apologies were fake. It's evidence that intending to change and actually
 changing are different events, and that a wording this good, repeated
 enough times without the second event ever showing up, starts to function
 as something other than what it was built to be.
+
+## When restitution is impossible, not just skipped
+
+The courier and the partner both had a repair available and didn't
+complete it. A harder case has no available repair at all: a driver
+who caused a permanent injury can apologise well, and there is no
+structural change or restitution that returns the other person's body to
+how it was. Prevention of recurrence — fixing the road, the training, the
+policy — is still possible and still owed, but it repairs the next
+person's risk, not this person's loss. Calling that "repair" for the
+person who was actually harmed would overstate what happened; the honest
+description is that some harms only ever get a subset of the six items on
+this list, permanently, and an apology's job in that case is to be
+accurate about which subset is still available rather than to imply the
+rest is coming.
 
 Week 9 already separated forgiveness, acceptance, and reconciliation from
 each other. Repair belongs on that same list, not folded into any of

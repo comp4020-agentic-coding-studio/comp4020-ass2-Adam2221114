@@ -3,11 +3,11 @@ import { getEntries, type CollectionEntry } from "astro:content";
 import { withBase } from "astro-theme-university/url";
 
 interface Props {
-  teachers: CollectionEntry<"sessions">["data"]["teachers"] | CollectionEntry<"lectures">["data"]["teachers"];
+  teachers: CollectionEntry<"lectures">["data"]["teachers"];
 }
 
 const { teachers } = Astro.props;
-// A session or lecture with no `teachers:` renders no team at all.
+// A lecture with no `teachers:` renders no team at all.
 const people = teachers ? await getEntries(teachers) : [];
 ---
 

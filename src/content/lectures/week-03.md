@@ -8,7 +8,6 @@ date: 2027-03-08
 teachers:
   - marisol-quaye
 related:
-  - sessions/03-which-part-is-doing-the-work
   - lectures/week-02
 ---
 
@@ -67,6 +66,24 @@ other three across public examples, which is worth noticing — but "more
 often" is not "always," and treating it as the fixed answer would mean
 missing cases exactly like the refund notice, where responsibility was
 never what was missing.
+
+## When two components are both load-bearing
+
+The two-case method suggests exactly one component fails at a time, which
+isn't always true. Take a manager's apology for publicly overriding a
+report they hadn't read: "I overruled your recommendation without
+reading it first, which was disrespectful of your work, and I'm sorry —
+I'm reversing the decision and reading the full report today." Remove
+the responsibility clause ("which was disrespectful") and the apology
+collapses into a bare description of an event. Remove the remedy clause
+("I'm reversing the decision") instead, and it collapses just as
+completely — a responsibility claim with no action behind it reads as
+words only, in a case where the harm is a decision still sitting there,
+uncorrected. Both ablations break it. That doesn't mean the method
+failed; it means this case's four components aren't independent load
+paths but two doing one combined job — naming the act, and undoing its
+effect — and removing either one removes half of a job that only counts
+as done when both halves are present.
 
 That's the method the rest of the semester runs on failed apologies: not
 "which component is missing," as if the answer were fixed in advance, but

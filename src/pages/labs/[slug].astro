@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 import { getPublishedCollection } from "astro-course-university/content";
 import RelatedContent from "astro-course-university/components/RelatedContent.astro";
+import SpecList from "astro-course-university/components/SpecList.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import { graphCollections, siteConfig } from "../../site-config";
 
@@ -18,5 +19,9 @@ const title = `Lab ${lab.data.number}: ${lab.data.title}`;
 <ContentLayout title={title} description={lab.data.description} {...siteConfig}>
   <p><strong>Weight:</strong> {lab.data.weight}%</p>
   <Content />
+  <SpecList spec={lab.data.spec}>
+    What you bring to the lab, and what you leave able to do. Written so a
+    reader can tell whether it has been met without asking you.
+  </SpecList>
   <RelatedContent entry={lab} collections={graphCollections} />
 </ContentLayout>

@@ -8,7 +8,6 @@ date: 2027-05-03
 teachers:
   - marisol-quaye
 related:
-  - sessions/11-apologise-now-or-not-yet
   - lectures/week-10
 ---
 
@@ -56,6 +55,23 @@ this week is actually arguing for: acknowledgment without a full
 apology. "Something went wrong. I don't yet know the details, but I take
 it seriously and I'll find out" commits to nothing false, closes nothing
 prematurely, and still tells the harmed party they haven't been ignored.
+
+## Two identical calls, two different outcomes
+
+Two team leads, in unrelated incidents, face the same decision under the
+same time pressure and make the same call: acknowledge without a full
+apology, and investigate before saying more. One investigation finishes
+in an hour and confirms a version everyone could have guessed; the delay
+cost nothing, and the fuller apology that follows lands well. The other
+investigation surfaces something genuinely unexpected two days later, by
+which point the harmed party has spent two days assuming the worst and
+reads the delay itself as evidence of evasion, regardless of what the
+investigation eventually found. Both leads followed this week's
+reasoning correctly at the moment they made the call — the process was
+sound in both cases. Only one produced a good outcome, because how long
+an investigation actually takes isn't knowable in advance. Judging the
+decision by the outcome would blame the second lead for a delay that was
+the right call given what they knew when they made it.
 
 Every week before this one treated the apology as something that should
 already exist, waiting to be built, fixed, or better delivered. This week

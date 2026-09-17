@@ -32,17 +32,6 @@ const holisticMarking = z.object({
 });
 
 export const collections = {
-  sessions: defineCollection({
-    loader: courseNodeLoader("sessions"),
-    schema: courseNodeSchema
-      .extend({
-        week: weekSchema,
-        date: z.coerce.date(),
-        teachers: teacherRefs.optional(),
-      })
-      .loose(),
-  }),
-
   assessments: defineCollection({
     loader: courseNodeLoader("assessments"),
     schema: courseNodeSchema

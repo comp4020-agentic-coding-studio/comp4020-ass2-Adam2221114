@@ -1,0 +1,129 @@
+---
+import { getPublishedCollection } from "astro-course-university/content";
+import { withBase } from "astro-theme-university/url";
+import HomeIcons from "./HomeIcons.astro";
+import { formatCourseDate } from "../lib/dates";
+import { buildTimeline } from "../lib/timeline";
+
+const lectures = await getPublishedCollection("lectures");
+const labs = await getPublishedCollection("labs");
+const assessments = await getPublishedCollection("assessments");
+const weeks = buildTimeline(lectures, labs, assessments);
+---
+
+<ol class="course-timeline">
+  {
+    weeks.map(({ week, date, lecture, lab, assessment }) => (
+      <li class="timeline-row">
+        <span class="timeline-dot" aria-hidden="true" />
+        <div class="timeline-body">
+          <p class="timeline-meta">
+            Week {week} · lecture {formatCourseDate(date)}
+          </p>
+          <a class="timeline-entry" href={withBase(`/lectures/${lecture.id}/`)}>
+            <HomeIcons name="book" class="timeline-icon" />
+            {lecture.data.title}
+          </a>
+          {lab && (
+            <a class="timeline-entry timeline-lab" href={withBase(`/labs/${lab.id}/`)}>
+              <HomeIcons name="flask" class="timeline-icon" />
+              Lab {lab.data.number}: {lab.data.title}
+            </a>
+          )}
+          {assessment && (
+            <a class="timeline-entry timeline-assessment" href={withBase(`/assessments/${assessment.id}/`)}>
+              <HomeIcons name="clipboard" class="timeline-icon" />
+              Due {formatCourseDate(assessment.data.due)}: {assessment.data.title} ·{" "}
+              {assessment.data.weight}%
+            </a>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .course-timeline {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 0 0 0 1.9rem;
+    list-style: none;
+  }
+
+  /* The connecting spine. A single absolutely-positioned line behind the
+     per-row dots, echoing the dotted-rule motif used elsewhere on this page
+     (movement-rule, section-divider) but solid and vertical since it has to
+     read as one continuous thread through twelve rows. */
+  .course-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    width: 2px;
+    background: var(--at-divider);
+  }
+
+  .timeline-row {
+    position: relative;
+    padding-block-end: 1.5rem;
+  }
+
+  .timeline-row:last-child {
+    padding-block-end: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 0.4rem;
+    left: -1.9rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 999px;
+    background: var(--at-primary);
+  }
+
+  .timeline-meta {
+    margin-block: 0 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--at-text-secondary);
+  }
+
+  .timeline-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+  }
+
+  .timeline-entry + .timeline-entry {
+    margin-block-start: 0.4rem;
+  }
+
+  /* Icon identity, not colour: every entry keeps the same ink so the row
+     reads as one week, and lecture/lab/assessment are told apart by their
+     icon (book/flask/clipboard, reused from the home page) and label rather
+     than a hue — the brand palette is a two-ink gold/bronze register with too
+     little hue separation to carry a three-way categorical distinction.
+     HomeIcons is a separate component, so its rendered <svg> doesn't carry
+     this file's scope attribute — :global() is required, same gotcha noted
+     in index.astro for .info-card-icon. */
+  :global(.timeline-icon) {
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--at-text-secondary);
+  }
+
+  .timeline-assessment {
+    font-weight: 700;
+  }
+
+  .timeline-assessment :global(.timeline-icon) {
+    color: var(--at-primary);
+  }
+</style>

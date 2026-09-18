@@ -17,6 +17,37 @@ spec:
     claiming the more powerful person could never have apologised
 related:
   - lectures/week-08
+quiz:
+  - question:
+      "What should stay held constant between the two incidents you
+      construct?"
+    options:
+      - "The identities of both people involved"
+      - "The kind of mistake — only the direction of the power
+        relationship should change"
+      - "The public platform used to respond"
+      - "The apology's length"
+    correct: 1
+  - question:
+      "What evidence does the lab ask you to use for whether power changes
+      the obligation to apologise?"
+    options:
+      - "Whether a personal response happens at all, how quickly, and
+        through what channel"
+      - "How famous the person is"
+      - "How much money is involved"
+      - "Public opinion polls"
+    correct: 0
+  - question:
+      "What does the lab say about a senior person who never personally
+      responds?"
+    options:
+      - "They have definitely lost the obligation to apologise"
+      - "They may simply have avoided the obligation at low cost to
+        themselves, not lost it"
+      - "They can no longer be held responsible at all"
+      - "It proves power has no effect on obligation"
+    correct: 1
 ---
 
 Before the lab, construct (or bring) two versions of one structurally

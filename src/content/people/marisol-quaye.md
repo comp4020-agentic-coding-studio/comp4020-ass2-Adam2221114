@@ -7,8 +7,10 @@ affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: marisol.quaye@slop.university
 contact: Email for course-level questions; use the weekly session for feedback on work.
-photo: ./marisol-quaye.avif
-photoAlt: A stylised portrait of a person in three-quarter view, flat gold and black shapes on warm cream, in a two-ink risograph print
+photo: ./marisol-quaye.png
+photoAlt: A woman with long dark wavy hair, wearing a mustard-yellow
+  sweater, smiling at the camera while holding a notebook and pen in a
+  classroom with a chalkboard behind her
 ---
 
 Marisol designed this course and teaches the weeks where the semester's

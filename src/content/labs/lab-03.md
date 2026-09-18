@@ -15,6 +15,33 @@ spec:
     the broken function and changes nothing else
 related:
   - lectures/week-04
+quiz:
+  - question: "What is the goal of the minimal repair exercise?"
+    options:
+      - "Rewrite the whole apology into a polished version"
+      - "Fix only the one broken function with the smallest possible edit"
+      - "Add a remedy no matter what was actually broken"
+      - "Replace vague words with different vague words"
+    correct: 1
+  - question:
+      "If your minimal repair still doesn't read as a working apology,
+      what should you check first?"
+    options:
+      - "Whether you actually diagnosed the right function"
+      - "Whether the sentence is long enough"
+      - "Whether the recipient will accept it"
+      - "Whether it sounds more polite now"
+    correct: 0
+  - question:
+      "Which of these counts as a specific, checkable finding from running
+      the ablation test on a non-apology?"
+    options:
+      - "The 'if,' the missing agent, or the redirected object — naming
+        the exact word or clause doing the damage"
+      - "A general feeling that it sounds fake"
+      - "The length of the apology"
+      - "Whether it was said out loud or in writing"
+    correct: 0
 ---
 
 Before the lab, collect three non-apologies — heard, read, or received —

@@ -17,6 +17,32 @@ spec:
     protect the responsible party while the harmed party waits
 related:
   - lectures/week-11
+quiz:
+  - question:
+      "Which five response types does the lab ask you to choose between
+      for each case?"
+    options:
+      - "Apologise now, acknowledge harm without a full apology,
+        investigate first, act first, delay"
+      - "Deny, minimise, blame, ignore, escalate"
+      - "Cry, argue, leave, wait, forget"
+      - "Sue, settle, apologise, resign, retire"
+    correct: 0
+  - question: "What must every chosen response also name, per the lab?"
+    options:
+      - "A concrete cost of that option, not only its benefit"
+      - "The exact time of day it should happen"
+      - "A witness to confirm it happened"
+      - "A law that requires it"
+    correct: 0
+  - question: "What test should you apply to a proposed delay?"
+    options:
+      - "Whether it's long enough to seem sincere"
+      - "Whether the delay would produce genuine new understanding, or
+        just leave the harmed party waiting"
+      - "Whether it avoids embarrassment"
+      - "Whether it matches company policy"
+    correct: 1
 ---
 
 Before the lab, have the lecture's five response types ready: apologise

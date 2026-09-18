@@ -72,3 +72,16 @@ const description = person.data.description;
 
   <Content />
 </ContentLayout>
+
+<style>
+  /* Hero.astro's .at-hero-image is a very wide, short (~5:1) full-bleed crop
+     with no object-position, so its default centre crop lands on these tall
+     portrait photos' torso and cuts the face out entirely. Scoped to this
+     page (via :global(), since Hero's <img> doesn't carry this file's scope
+     attribute) rather than overriding the theme class everywhere, since the
+     home page and 404 page also render an .at-hero-image but with the
+     landscape hero-home illustration, which centres fine as-is. */
+  :global(.at-hero-image) {
+    object-position: 50% 15%;
+  }
+</style>

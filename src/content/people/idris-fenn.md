@@ -7,8 +7,10 @@ affiliation: Slop University School of Invented Disciplines
 role: tutor
 email: idris.fenn@slop.university
 contact: Ask during sessions, or email when a question cannot wait until the next one.
-photo: ./idris-fenn.avif
-photoAlt: A stylised portrait of a person facing the viewer, flat gold and black shapes on warm cream, in a two-ink risograph print
+photo: ./idris-fenn.png
+photoAlt: A man with curly dark hair, glasses, and a beard, wearing a green
+  hoodie, smiling at the camera while holding a notebook and pen in a
+  classroom with a chalkboard behind him
 ---
 
 Idris teaches the weeks that put Marisol's material under pressure:

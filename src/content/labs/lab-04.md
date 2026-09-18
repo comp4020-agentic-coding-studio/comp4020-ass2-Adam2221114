@@ -17,6 +17,33 @@ spec:
     actually present
 related:
   - lectures/week-05
+quiz:
+  - question:
+      "Which four functions can an apology's actual wording serve, per the
+      lecture?"
+    options:
+      - "Repair, self-protection, reputation management, closure"
+      - "Truth, justice, mercy, peace"
+      - "Speed, cost, length, tone"
+      - "Apology, excuse, denial, silence"
+    correct: 0
+  - question: "What counts as valid evidence for which function an apology serves?"
+    options:
+      - "A guess about the speaker's private feelings"
+      - "A specific phrase, a publication timing relative to other events,
+        or a concession that cost the speaker something"
+      - "How sincere it sounds when read aloud"
+      - "Whether the speaker appeared to cry"
+    correct: 1
+  - question:
+      "If an apology seems to serve two or three functions about equally,
+      what should you do?"
+    options:
+      - "Pick whichever function your evidence best supports"
+      - "Say so directly, rather than forcing a single dominant function"
+      - "Assume it must be a non-apology"
+      - "Ignore the ambiguous case"
+    correct: 1
 ---
 
 Before the lab, find two apologies responding to broadly comparable

@@ -18,6 +18,36 @@ spec:
     instead
 related:
   - lectures/week-09
+quiz:
+  - question:
+      "Which seven terms does the lab ask you to sort recipient responses
+      against?"
+    options:
+      - "Hearing, acknowledgment, acceptance, forgiveness, reconciliation,
+        repair, closure"
+      - "Sorry, guilty, angry, sad, relieved, calm, done"
+      - "First, second, third, fourth, fifth, sixth, seventh"
+      - "Legal, moral, social, personal, public, private, professional"
+    correct: 0
+  - question:
+      "Can more than one of the seven terms apply to the same recipient
+      response?"
+    options:
+      - "No, each response gets exactly one term"
+      - "Yes — that's expected, not a sign you've done it wrong"
+      - "Only for responses given in public"
+      - "Only if the whole group agrees unanimously"
+    correct: 1
+  - question:
+      "For a recipient response that keeps shifting its objection no
+      matter how the apology is revised, what should you consider?"
+    options:
+      - "That it's always a legitimate standard not yet met"
+      - "That it may be a demand no apology could satisfy — and asking
+        what's actually being requested instead"
+      - "That the apology must be poorly worded"
+      - "That the recipient is lying"
+    correct: 1
 ---
 
 Before the lab, have the lecture's seven terms ready to hand — hearing,

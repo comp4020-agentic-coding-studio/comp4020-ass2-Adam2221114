@@ -14,6 +14,37 @@ spec:
     over observers, and can name what it costs in public accountability
 related:
   - lectures/week-06
+quiz:
+  - question:
+      "In the line-by-line analysis, who might a given line be built to
+      serve?"
+    options:
+      - "The harmed party specifically, observers who weren't harmed, or
+        genuinely both"
+      - "Only the speaker's lawyer"
+      - "Only search engines"
+      - "Only future employees"
+    correct: 0
+  - question:
+      "When you rewrite the apology to prioritise the harmed party, what
+      should you explicitly say afterward?"
+    options:
+      - "How much shorter the new version is"
+      - "What the rewrite gives up — what an observer can no longer judge
+        or be reassured about"
+      - "Whether the new version rhymes"
+      - "Nothing — the rewrite needs no further comment"
+    correct: 1
+  - question:
+      "If a line seems to serve the harmed party and observers equally
+      well, what should you check?"
+    options:
+      - "Assume it's a coincidence and move on"
+      - "Whether it satisfies both by genuine specificity, or is simply
+        vague enough for each audience to read in what they need"
+      - "Whether the line is grammatically correct"
+      - "Whether the audience noticed at all"
+    correct: 1
 ---
 
 Before the lab, find a real public apology statement — a company

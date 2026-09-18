@@ -56,3 +56,16 @@ const visible = people.sort((a, b) => {
     ))
   }
 </CardGrid>
+
+<style>
+  /* Card.astro's .at-card-image is a fixed 16:9 crop (object-fit: cover);
+     these portrait photos are tall with the face in the upper third, so the
+     theme's default centred crop cuts off the top of the head and shows
+     mostly torso/notebook. PeopleGrid is the only place in this project
+     that passes an `image` to Card, so this :global() override (needed
+     because Card's rendered <img> doesn't carry this file's scope
+     attribute) only ever affects these two portraits. */
+  :global(.at-card-image) {
+    object-position: 50% 20%;
+  }
+</style>

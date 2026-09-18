@@ -31,6 +31,22 @@ const holisticMarking = z.object({
   description: z.string().trim().min(40),
 });
 
+const quizQuestion = z
+  .object({
+    question: z.string().trim().min(1),
+    options: z.array(z.string().trim().min(1)).min(2),
+    correct: z.number().int().min(0),
+  })
+  .superRefine((quiz, ctx) => {
+    if (quiz.correct >= quiz.options.length) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["correct"],
+        message: `correct index ${quiz.correct} is out of range for ${quiz.options.length} options`,
+      });
+    }
+  });
+
 export const collections = {
   assessments: defineCollection({
     loader: courseNodeLoader("assessments"),
@@ -66,6 +82,7 @@ export const collections = {
         number: z.number().int().min(1).max(10),
         week: weekSchema,
         weight: z.literal(1).default(1),
+        quiz: z.array(quizQuestion).length(3),
       })
       .loose(),
   }),

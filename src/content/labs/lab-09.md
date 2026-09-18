@@ -18,6 +18,32 @@ spec:
     additional to it
 related:
   - lectures/week-10
+quiz:
+  - question: "What four outcomes can a proposed repair action target?"
+    options:
+      - "Restitution, behaviour change, structural repair, prevention of
+        recurrence"
+      - "Apology, excuse, promise, silence"
+      - "Speed, cost, visibility, sincerity"
+      - "Guilt, shame, regret, relief"
+    correct: 0
+  - question: "In this lab, are you allowed to rewrite the apology's wording again?"
+    options:
+      - "Yes, rewriting the wording is the main task"
+      - "No — the wording is already adequate; the task is designing
+        repair actions"
+      - "Only if the wording is grammatically incorrect"
+      - "Only the closing line may be changed"
+    correct: 1
+  - question:
+      "If an apology's own wording already promised an action (e.g. 'we'll
+      make sure of it'), how should that action be classified?"
+    options:
+      - "As something extra you're generously adding"
+      - "As something already owed and unpaid, not a new addition"
+      - "As irrelevant to the repair plan"
+      - "As proof the apology was insincere"
+    correct: 1
 ---
 
 Before the lab, bring or select an apology that would pass every test

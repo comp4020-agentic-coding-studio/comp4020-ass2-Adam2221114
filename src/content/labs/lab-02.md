@@ -15,6 +15,34 @@ spec:
     break someone else's
 related:
   - lectures/week-03
+quiz:
+  - question: "What does the ablation test involve?"
+    options:
+      - "Removing one component at a time and rereading what's left"
+      - "Adding new components to strengthen an apology"
+      - "Comparing two completely unrelated apologies"
+      - "Timing how long an apology takes to deliver"
+    correct: 0
+  - question:
+      "If removing every component damages the apology by roughly the same
+      amount, what should you do?"
+    options:
+      - "Force a single 'winner' component anyway"
+      - "Report that the apology has no single load-bearing part — a real,
+        reportable finding"
+      - "Discard the apology as invalid"
+      - "Assume you made a mistake and redo the test"
+    correct: 1
+  - question:
+      "If two pairs' apologies disagree about which component is
+      load-bearing, what's the right response?"
+    options:
+      - "Ignore the disagreement"
+      - "Pick whichever pair argued more confidently"
+      - "Write down what was different about the two situations that made
+        a different component critical"
+      - "Average the two results"
+    correct: 2
 ---
 
 Before the lab, have your Lab 1 marked-up apology ready — the one with

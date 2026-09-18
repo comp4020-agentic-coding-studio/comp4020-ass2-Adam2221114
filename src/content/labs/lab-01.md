@@ -14,6 +14,31 @@ spec:
   - you can name one component that looks included but isn't doing anything
 related:
   - lectures/week-02
+quiz:
+  - question: "Which four components does the lab ask you to identify in an apology?"
+    options:
+      - "Acknowledgment, responsibility, regret, remedy"
+      - "Apology, excuse, promise, sorry"
+      - "Cause, blame, guilt, punishment"
+      - "Greeting, context, apology, farewell"
+    correct: 0
+  - question: "What does it mean for a component to be 'present but hollow'?"
+    options:
+      - "It's missing entirely"
+      - "It appears in the wording but isn't doing any real work"
+      - "It's the strongest part of the apology"
+      - "It was added after the fact"
+    correct: 1
+  - question:
+      "If a partner's apology has every component clearly present with
+      nothing to flag as hollow, what should you do?"
+    options:
+      - "Manufacture a doubt anyway, so you have something to report"
+      - "Say which component came closest to feeling redundant with another,
+        and what would collapse them"
+      - "Report that the apology is perfect and move on"
+      - "Reject the apology as too good to be real"
+    correct: 1
 ---
 
 Before the lab, pick an apology you haven't looked at through the

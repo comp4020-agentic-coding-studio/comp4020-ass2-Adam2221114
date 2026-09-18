@@ -129,6 +129,35 @@ describe("lab connections", () => {
   });
 });
 
+interface QuizQuestion {
+  question: string;
+  options: string[];
+  correct: number;
+}
+
+describe("lab quizzes", () => {
+  const labs = byType("labs");
+
+  it("has at least one lab to check", () => {
+    expect(labs.length).toBeGreaterThan(0);
+  });
+
+  it.each(labs.map((lab) => [lab.id, lab.meta?.quiz as QuizQuestion[] | undefined]))(
+    "%s has exactly three quiz questions, each with a valid correct answer",
+    (id, quiz) => {
+      expect(quiz, `${id} has no quiz`).toBeDefined();
+      expect(quiz, `${id} should have exactly three quiz questions`).toHaveLength(3);
+      for (const item of quiz ?? []) {
+        expect(item.options.length, `${id} question "${item.question}" needs at least two options`).toBeGreaterThanOrEqual(2);
+        expect(
+          item.correct >= 0 && item.correct < item.options.length,
+          `${id} question "${item.question}" has an out-of-range correct index`,
+        ).toBe(true);
+      }
+    },
+  );
+});
+
 describe("course code", () => {
   it("keeps the assigned last three digits and the postgraduate level digit", () => {
     expect(api.course.code, "last three digits must stay 003").toMatch(/003$/);

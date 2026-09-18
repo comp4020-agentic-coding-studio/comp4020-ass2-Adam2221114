@@ -16,6 +16,34 @@ spec:
     and show that the difference comes from timing or medium, not wording
 related:
   - lectures/week-07
+quiz:
+  - question:
+      "In the timing-pair exercise, how many extra sentences are you
+      allowed to add to the delayed version?"
+    options:
+      - "None"
+      - "Exactly one, showing what the delay was actually used for"
+      - "As many as needed to explain the delay"
+      - "A full paragraph"
+    correct: 1
+  - question:
+      "What should you check before concluding a difference between two
+      versions came from timing or medium?"
+    options:
+      - "That the wording actually held constant between the two versions"
+      - "That both versions are the same length"
+      - "That the recipient liked one version better"
+      - "Nothing further is needed"
+    correct: 0
+  - question:
+      "In the medium-pair exercise, what might a face-to-face version show
+      that a text message can't?"
+    options:
+      - "A pause, a raised voice, or a straight face — stage directions"
+      - "The exact time it was sent"
+      - "A spelling correction"
+      - "Whether it was proofread"
+    correct: 0
 ---
 
 Before the lab, have one apology ready — your own or a provided one —

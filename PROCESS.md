@@ -1,78 +1,21 @@
 # Process overview
 
-Written by me, for a reader: how I got from the brief to the harness and
-agentic workflow behind this submission.
-
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and its
-[word counts](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#word-counts)
-cover every deliverable.
-
 ## What I built
 
-A Slop University course site for **The Perfect Apology** (SLOP8xxx), a
-postgraduate course on why apologies succeed or fail — responsibility,
-language, timing, power, and repair — built on the starter's Astro content
-model and shipped as twelve dated teaching weeks grouped into seven
-movements.
+A Slop University course site for **The Perfect Apology** (SLOP8003), a postgraduate course on why apologies succeed or fail — responsibility, language, timing, power, and repair — shipped as twelve dated teaching weeks grouped into seven movements, with a ten-session applied-practice track and three assessments that escalate on the same argument.
 
 ## How I got here
 
-I worked the brief in phases rather than generating the whole course in one
-pass, establishing course-design decisions before content: the concept and
-level in
-[`e0b1b21`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/e0b1b21),
-the twelve-week curriculum structure in
-[`5f07ae6`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/5f07ae6),
-assessment weights and design in
-[`57a26b3`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/57a26b3),
-and the human-vs-mechanical course-design principles in
-[`bad62d1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/bad62d1).
+A good niche course needs one question driving every phase, not a syllabus stitched from independent topics. Before generating any content I fixed the Central Course Question — “what makes an apology actually work?” — and mapped the twelve-week progression as builds-on/prepares-for relationships so later weeks complicate rather than restate the answer ([`e0b1b21`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/e0b1b21)).
 
-Before writing content, I hardened the spec tests that check the mechanical
-promises made in those principles
-([`b293228`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/b293228),
-[`9d9eee9`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/9d9eee9)),
-so later content generation had something automated to fail against rather
-than relying on my own re-reading.
+I then split my own course-design principles into what a build can verify mechanically and what needs a human reading it. Weight sums, twelve weeks with no gaps, banned generic-AI phrases, and `related:` edges resolving into real lectures became `spec/` tests. Whether a week reads as genuinely different from its neighbour, whether an example earns its place, and whether the voice still sounds considered stayed as `CLAUDE.md` judgement calls I kept re-checking, since a regex can't replace the quality it protects ([`bad62d1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/bad62d1)).
 
-Content replaced the starter's placeholders in stages: the content
-architecture in
-[`aab9d25`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/aab9d25),
-the twelve weeks across four batches
-([`37fd039...d30ca07`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/compare/37fd039...d30ca07)),
-a correction to Week 3 once I noticed it stated a settled hierarchy the course
-concept treats as contested
-([`7d93d9e`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/7d93d9e)),
-the three assessments' own pages
-([`43d9e3a`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/43d9e3a)),
-and the people/policies pages
-([`24dbb9b`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/24dbb9b)).
-Finally I grouped the twelve weeks into the seven movements the semester
-actually argues through and surfaced the Central Course Question on the home
-page
-([`f01890e`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/f01890e)).
+Generated content got redirected, not just accepted. Week 3 first ranked apology components, arguing responsibility-taking was universally load-bearing — contradicting my own principle that no component belongs in a fixed hierarchy. I rewrote it as an ablation test where a different component becomes load-bearing depending on the case ([`7d93d9e`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/7d93d9e)).
 
-I knew the result was right by running the project's own checks after each
-phase — `pnpm check` (typecheck plus the Phase 5 spec suite) and
-`pnpm check:evidence` — rather than trusting my own read of the rendered
-pages, and by fixing what those checks caught: starter artwork and marker
-comments the spec tests don't scan for, single-item movement grids rendering
-an empty grid track, and pages silently missing an `h1` because `heroTitle`
-alone is a no-op without a `heroImage` in the vendored layout.
+Partway through I decided `Sessions` and `Lectures` were redundant and deleted `Sessions` outright, replacing it with an independent `Labs` collection under its own key. That was a platform-contract mistake, not a design choice: the template fixes `sessions` as one of four collection keys the generated API and cross-page references depend on, and only permits relabelling what students see via `sessionLabels`, not removing the collection. The build still passed and every test went green, since nothing in `spec/` checked for the collection's continued existence, only for properties within whatever collection carried the content. Rereading the template's README against what I had actually implemented surfaced the mismatch: I restored the fixed `sessions` collection in `content.config.ts`, migrated all ten practice files into it with their `week`, `weight`, `quiz`, and `related` fields unchanged, and renamed the student-facing label from `Labs` to `Sessions`, so the label, URL, collection key, and generated API type all finally agree ([`3b96312`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/3b96312)).
 
-Screenshots are welcome where one carries the point better than a sentence does.
-Commit the file to this repo and link it with a **relative** path, which is what
-makes it render on GitHub: `![alt text](docs/before.png)`. Images don't count
-towards the word count and don't replace the citation.
+The same distinction between mechanical and human judgement shaped how I validated the finished site. `pnpm check` and `pnpm check:evidence` protect mechanical promises — weights, gaps, banned phrases, resolved edges — but a flat grey hero banner only became visible on the rendered page. Diffing git blob hashes across commits ruled out a CSS regression and showed the actual cause was an unrelated earlier asset swap ([`40b63c1`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/40b63c1)): a detailed illustration replaced by a simpler graphic whose brightest area sits under the theme's unchanged CSS scrim. I confirmed this by compositing the real scrim over both images before restoring the original asset rather than regenerating a new one ([`3690106`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-Adam2221114/commit/3690106)).
 
-## Before you ship
+I also inspected the site at both official marking viewports — 1920×1080 and 390×844 — because a green build only proves that the mechanical promises hold, not that the rendered course actually works for a marker moving through it.
 
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
-
-Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
-image is visible the moment this file is rendered on GitHub.
+That is the shape of the process: automated checks caught what a promise could be reduced to a rule, while visual inspection caught what only appeared once the site was actually rendered.

@@ -6,7 +6,7 @@ import { formatCourseDate } from "../lib/dates";
 import { buildTimeline } from "../lib/timeline";
 
 const lectures = await getPublishedCollection("lectures");
-const labs = await getPublishedCollection("labs");
+const labs = await getPublishedCollection("sessions");
 const assessments = await getPublishedCollection("assessments");
 const weeks = buildTimeline(lectures, labs, assessments);
 ---
@@ -25,9 +25,9 @@ const weeks = buildTimeline(lectures, labs, assessments);
             {lecture.data.title}
           </a>
           {lab && (
-            <a class="timeline-entry timeline-lab" href={withBase(`/labs/${lab.id}/`)}>
+            <a class="timeline-entry timeline-lab" href={withBase(`/sessions/${lab.id}/`)}>
               <HomeIcons name="flask" class="timeline-icon" />
-              Lab {lab.data.number}: {lab.data.title}
+              Session {lab.data.number}: {lab.data.title}
             </a>
           )}
           {assessment && (

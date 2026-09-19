@@ -2,7 +2,14 @@ import { defineSiteConfig } from "astro-theme-university/types";
 import { slopBranding } from "astro-theme-slop";
 import { courseMeta } from "./course-config";
 
-export const graphCollections = ["assessments", "lectures", "people", "labs"];
+// The underlying collection and URL remain `sessions`; this label is the
+// language students see. Change it to Studios, Tutorials, Expeditions, etc.
+export const sessionLabels = {
+  singular: "Session",
+  plural: "Sessions",
+} as const;
+
+export const graphCollections = ["sessions", "assessments", "lectures", "people"];
 
 export const courseApiCollections = [
   ...graphCollections.map((key) => ({ key })),
@@ -15,7 +22,7 @@ export const siteConfig = defineSiteConfig({
 
   links: [
     { text: "Lectures", href: "/lectures/" },
-    { text: "Labs", href: "/labs/" },
+    { text: sessionLabels.plural, href: "/sessions/" },
     { text: "Assessment", href: "/assessments/" },
     { text: "People", href: "/people/" },
     { text: "Policies", href: "/policies/" },

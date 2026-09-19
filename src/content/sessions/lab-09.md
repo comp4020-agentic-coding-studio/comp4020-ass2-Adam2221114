@@ -46,15 +46,15 @@ quiz:
     correct: 1
 ---
 
-Before the lab, bring or select an apology that would pass every test
+Before the session, bring or select an apology that would pass every test
 this course has built so far: specific, responsible, no hedging, properly
 timed, correctly addressed — and attach it to a situation where, as far
 as you know, nothing changed afterward. The courier case from lecture is
 one model; a workplace, institutional, or personal case works just as
 well if the gap between wording and aftermath is real.
 
-In the lab, don't touch the wording again — it's already adequate, and
-rewriting it is Lab 3's exercise, not this one. Instead, design at least
+In the session, don't touch the wording again — it's already adequate, and
+rewriting it is Session 3's exercise, not this one. Instead, design at least
 three separate repair actions the situation calls for, and for each one,
 name which of the four outcomes it actually addresses: restitution,
 behaviour change, structural repair, prevention of recurrence. Some

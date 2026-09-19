@@ -44,12 +44,12 @@ quiz:
     correct: 0
 ---
 
-Before the lab, collect three non-apologies — heard, read, or received —
+Before the session, collect three non-apologies — heard, read, or received —
 that don't feel like the same kind of failure as each other. If you can't
 find three that feel different, that's worth noticing too; bring what
 you have and say so.
 
-In the lab, for each non-apology, run the ablation test from Lab 2:
+In the session, for each non-apology, run the ablation test from Session 2:
 remove pieces one at a time until you find the one whose removal (or
 whose presence) is doing the damage. Name the function that's actually
 broken — acknowledgment, responsibility, regret, remedy — and be able to

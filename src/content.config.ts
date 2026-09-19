@@ -75,12 +75,14 @@ export const collections = {
       .loose(),
   }),
 
-  labs: defineCollection({
-    loader: courseNodeLoader("labs"),
+  sessions: defineCollection({
+    loader: courseNodeLoader("sessions"),
     schema: courseNodeSchema
       .extend({
         number: z.number().int().min(1).max(10),
         week: weekSchema,
+        date: z.coerce.date().optional(),
+        teachers: teacherRefs.optional(),
         weight: z.literal(1).default(1),
         quiz: z.array(quizQuestion).length(3),
       })

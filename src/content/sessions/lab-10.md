@@ -45,12 +45,12 @@ quiz:
     correct: 1
 ---
 
-Before the lab, have the lecture's five response types ready: apologise
+Before the session, have the lecture's five response types ready: apologise
 now, acknowledge harm without a full apology, investigate first, act
 first, delay. You'll be assigning one to each case, not picking whichever
 feels most comfortable.
 
-In the lab, you're given three deliberately ambiguous situations:
+In the session, you're given three deliberately ambiguous situations:
 
 - A university department is told, anonymously, that its marking process
   may have disadvantaged some students, and has to respond to a public

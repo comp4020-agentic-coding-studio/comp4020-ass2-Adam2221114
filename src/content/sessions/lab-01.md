@@ -41,12 +41,12 @@ quiz:
     correct: 1
 ---
 
-Before the lab, pick an apology you haven't looked at through the
+Before the session, pick an apology you haven't looked at through the
 four-component lens yet. It can be personal or public, written or
 something you remember well enough to transcribe. Don't pre-sort it — the
-marking-up happens in the lab itself.
+marking-up happens in the session itself.
 
-In the lab, pairs annotate their partner's apology using the four
+In the session, pairs annotate their partner's apology using the four
 components from the lecture: acknowledgment, responsibility, regret,
 remedy. Underline or bracket the exact phrase doing each job. Some
 components will have no phrase at all — mark that as clearly as a

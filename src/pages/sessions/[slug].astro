@@ -8,13 +8,13 @@ import LabQuiz from "../../components/LabQuiz.astro";
 import { graphCollections, siteConfig } from "../../site-config";
 
 export async function getStaticPaths() {
-  const labs = await getPublishedCollection("labs");
+  const labs = await getPublishedCollection("sessions");
   return labs.map((lab) => ({ params: { slug: lab.id }, props: { lab } }));
 }
 
 const { lab } = Astro.props;
 const { Content } = await render(lab);
-const title = `Lab ${lab.data.number}: ${lab.data.title}`;
+const title = `Session ${lab.data.number}: ${lab.data.title}`;
 ---
 
 <ContentLayout title={title} description={lab.data.description} {...siteConfig}>
@@ -23,7 +23,7 @@ const title = `Lab ${lab.data.number}: ${lab.data.title}`;
   <h2>Check your understanding</h2>
   <LabQuiz quiz={lab.data.quiz} />
   <SpecList spec={lab.data.spec}>
-    What you bring to the lab, and what you leave able to do. Written so a
+    What you bring to the session, and what you leave able to do. Written so a
     reader can tell whether it has been met without asking you.
   </SpecList>
   <RelatedContent entry={lab} collections={graphCollections} />

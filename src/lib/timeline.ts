@@ -4,7 +4,7 @@ export interface TimelineWeek {
   week: number;
   date: Date;
   lecture: CollectionEntry<"lectures">;
-  lab?: CollectionEntry<"labs">;
+  lab?: CollectionEntry<"sessions">;
   assessment?: CollectionEntry<"assessments">;
 }
 
@@ -13,7 +13,7 @@ export interface TimelineWeek {
  *  runs during its own teaching week, so its date is the week's lecture date. */
 export function buildTimeline(
   lectures: CollectionEntry<"lectures">[],
-  labs: CollectionEntry<"labs">[],
+  labs: CollectionEntry<"sessions">[],
   assessments: CollectionEntry<"assessments">[],
 ): TimelineWeek[] {
   return lectures

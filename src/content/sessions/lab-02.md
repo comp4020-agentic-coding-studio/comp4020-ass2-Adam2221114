@@ -7,7 +7,7 @@ number: 2
 week: 3
 weight: 1
 spec:
-  - you bring the apology you marked up in Lab 1 (or a new one, marked up
+  - you bring the apology you marked up in Session 1 (or a new one, marked up
     the same way)
   - you can show which component's removal breaks your apology, and which
     removal barely changes it
@@ -45,12 +45,12 @@ quiz:
     correct: 2
 ---
 
-Before the lab, have your Lab 1 marked-up apology ready — the one with
-each component underlined and labelled present, weak, or missing. If
+Before the session, have your Session 1 marked-up apology ready — the one
+with each component underlined and labelled present, weak, or missing. If
 you're using a new example, mark it up the same way first; the ablation
 exercise doesn't work on an un-annotated apology.
 
-In the lab, working from that marked-up text, remove one component at a
+In the session, working from that marked-up text, remove one component at a
 time — cross it out, don't just imagine it gone — and reread what's left
 after each removal. For each one, decide: does the remainder still
 function as an apology, just a worse one, or does it stop functioning as

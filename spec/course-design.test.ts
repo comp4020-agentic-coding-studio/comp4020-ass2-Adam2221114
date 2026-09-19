@@ -60,7 +60,7 @@ describe("banned phrases", () => {
   // id list, so this set grows to cover every lecture and assessment as
   // they're authored, not just the placeholders that exist today.
   const taughtContent = api.nodes.filter((node) =>
-    ["lectures", "assessments", "labs"].includes(node.type),
+    ["lectures", "assessments", "sessions"].includes(node.type),
   );
 
   it("has at least one node to check", () => {
@@ -90,7 +90,7 @@ describe("assessment weights", () => {
   });
 
   it("labs sum to exactly 10 (1% each, ten labs)", () => {
-    const total = byType("labs").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
+    const total = byType("sessions").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
     expect(total).toBe(10);
   });
 
@@ -99,7 +99,7 @@ describe("assessment weights", () => {
       (sum, node) => sum + Number(node.meta?.weight ?? 0),
       0,
     );
-    const labsTotal = byType("labs").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
+    const labsTotal = byType("sessions").reduce((sum, node) => sum + Number(node.meta?.weight ?? 0), 0);
     expect(assessmentsTotal + labsTotal).toBe(100);
   });
 });
@@ -125,7 +125,7 @@ describe("assessment connections", () => {
 
 describe("lab connections", () => {
   it("every lab has an edge into a lecture", () => {
-    expectEveryNodeConnectedToTeaching("labs");
+    expectEveryNodeConnectedToTeaching("sessions");
   });
 });
 
@@ -136,7 +136,7 @@ interface QuizQuestion {
 }
 
 describe("lab quizzes", () => {
-  const labs = byType("labs");
+  const labs = byType("sessions");
 
   it("has at least one lab to check", () => {
     expect(labs.length).toBeGreaterThan(0);

@@ -50,13 +50,13 @@ quiz:
     correct: 1
 ---
 
-Before the lab, construct (or bring) two versions of one structurally
+Before the session, construct (or bring) two versions of one structurally
 similar incident: the same kind of mistake, made once by someone with
 less power toward someone with more, and once by someone with more power
 toward someone with less. Keep the mistake itself as close to identical
 as you can; only the direction of the power relationship should change.
 
-In the lab, for each pair, argue one of two positions and be ready to
+In the session, for each pair, argue one of two positions and be ready to
 defend it: either the obligation to apologise genuinely changes depending
 on who holds power, or the obligation stays the same and only the
 likelihood, speed, or form of the apology changes because of what the

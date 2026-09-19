@@ -47,11 +47,11 @@ quiz:
     correct: 1
 ---
 
-Before the lab, find a real public apology statement — a company
+Before the session, find a real public apology statement — a company
 statement, a public figure's post, a press release — long enough to have
 more than two or three sentences.
 
-In the lab, go through it line by line. For each line, decide who it is
+In the session, go through it line by line. For each line, decide who it is
 actually built to serve: the harmed party specifically, observers who
 weren't harmed, or genuinely both. Point at what makes the call — a
 vague phrase that protects the harmed party's privacy at the cost of

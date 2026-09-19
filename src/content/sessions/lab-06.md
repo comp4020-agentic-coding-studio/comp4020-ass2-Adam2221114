@@ -46,10 +46,10 @@ quiz:
     correct: 0
 ---
 
-Before the lab, have one apology ready — your own or a provided one —
+Before the session, have one apology ready — your own or a provided one —
 short enough to deliver in a sentence or two.
 
-In the lab, produce two variants of it. For a timing pair: the same
+In the session, produce two variants of it. For a timing pair: the same
 wording delivered immediately, and the same wording delivered after a
 delay you choose, where you're allowed to add exactly one sentence
 showing what the delay was actually used for — no more. For a medium

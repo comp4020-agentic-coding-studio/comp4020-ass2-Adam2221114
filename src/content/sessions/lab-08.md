@@ -50,12 +50,12 @@ quiz:
     correct: 1
 ---
 
-Before the lab, have the lecture's seven terms ready to hand — hearing,
+Before the session, have the lecture's seven terms ready to hand — hearing,
 acknowledgment, acceptance, forgiveness, reconciliation, repair, closure
 — you'll be sorting responses against them, not against a vague sense of
 "worked" or "didn't work."
 
-In the lab, you'll be given one well-constructed apology and a set of
+In the session, you'll be given one well-constructed apology and a set of
 different recipient responses to it: a flat "fine, apology accepted"
 followed by no change in contact; "I forgive you, but I don't think I can
 trust you the same way"; someone who says nothing at all but quietly
